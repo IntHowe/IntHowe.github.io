@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://inthowe.github.io</id>
     <title>你看见我小熊么</title>
-    <updated>2021-04-02T05:41:50.883Z</updated>
+    <updated>2021-04-02T06:37:51.768Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://inthowe.github.io"/>
     <link rel="self" href="https://inthowe.github.io/atom.xml"/>
@@ -10,6 +10,55 @@
     <logo>https://inthowe.github.io/images/avatar.png</logo>
     <icon>https://inthowe.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 你看见我小熊么</rights>
+    <entry>
+        <title type="html"><![CDATA[初识贪心算法]]></title>
+        <id>https://inthowe.github.io/post/greedy1/</id>
+        <link href="https://inthowe.github.io/post/greedy1/">
+        </link>
+        <updated>2021-04-02T05:43:49.000Z</updated>
+        <summary type="html"><![CDATA[<p>感觉贪心算法更倾向于是一种策略。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>感觉贪心算法更倾向于是一种策略。</p>
+<!-- more -->
+<p>从leetcode简单题中感受不到贪心算法。。。感觉是根据题目所做出的策略。</p>
+<h2 id="leetcode1725-可以形成最大正方形的矩形数目"><a href="https://leetcode-cn.com/problems/number-of-rectangles-that-can-form-the-largest-square/">leetcode#1725. 可以形成最大正方形的矩形数目</a></h2>
+<p>找出每组最小值，再依次遍历最小值，记录其中的最大值及其出现次数，出现更大的值就修改最大值并将次数置为1。</p>
+<h2 id="leetcode944-删列造序"><a href="https://leetcode-cn.com/problems/delete-columns-to-make-sorted/">leetcode#944. 删列造序</a></h2>
+<p>记录“不是按字典序升序排列的列”的列数</p>
+<h2 id="leetcode1403-非递增顺序的最小子序列"><a href="https://leetcode-cn.com/problems/minimum-subsequence-in-non-increasing-order/">leetcode#1403. 非递增顺序的最小子序列</a></h2>
+<p>排序后，依次提取最大值放入子序列，判断子序列的元素之和是否大于未包含在该子序列中的各元素之和</p>
+<h2 id="leetcode1716-计算力扣银行的钱"><a href="https://leetcode-cn.com/problems/calculate-money-in-leetcode-bank/">leetcode#1716. 计算力扣银行的钱</a></h2>
+<p>对7求余和商，递增即可</p>
+<h2 id="leetcode1518-换酒问题"><a href="https://leetcode-cn.com/problems/water-bottles/">leetcode#1518. 换酒问题</a></h2>
+<p>空酒瓶数应为空酒瓶数数对numExchange的商加余数，不断兑换直至空酒瓶数小于numExchange</p>
+<h2 id="leetcode122-买卖股票的最佳时机-ii"><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/">leetcode#122. 买卖股票的最佳时机 II</a></h2>
+<p>不限次数买卖，那只要是比前一天的股价高即可进行一轮买卖，计算其差价即可</p>
+<h2 id="leetcode1758-生成交替二进制字符串的最少操作数"><a href="https://leetcode-cn.com/problems/minimum-changes-to-make-alternating-binary-string/">leetcode#1758. 生成交替二进制字符串的最少操作数</a></h2>
+<p>交替字符串只有两种&quot;1010....&quot;和&quot;0101...&quot;，分别比较和这两字符串相差多少个字符，取其最小值</p>
+<h2 id="leetcode860柠檬水找零"><a href="https://leetcode-cn.com/problems/lemonade-change/">leetcode#860.柠檬水找零</a></h2>
+<p>模拟并尽可能找大钞即可</p>
+<h2 id="leetcode455-分发饼干"><a href="https://leetcode-cn.com/problems/assign-cookies/">leetcode#455. 分发饼干</a></h2>
+<p>小朋友和饼干排序，尽可能给最小尺寸的饼干即可</p>
+<h2 id="leetcode1005-k-次取反后最大化的数组和"><a href="https://leetcode-cn.com/problems/maximize-sum-of-array-after-k-negations/">leetcode#1005. K 次取反后最大化的数组和</a></h2>
+<p>排序，从最小的负数开始取反，取反后还有次数就再排序，只对最小的数反复取反，判断单双即可</p>
+<h2 id="leetcode1784-检查二进制字符串字段"><a href="https://leetcode-cn.com/problems/check-if-binary-string-has-at-most-one-segment-of-ones/">leetcode#1784. 检查二进制字符串字段</a></h2>
+<p>模拟判断即可</p>
+<h2 id="leetcode1736-替换隐藏数字得到的最晚时间"><a href="https://leetcode-cn.com/problems/latest-time-by-replacing-hidden-digits/">leetcode#1736. 替换隐藏数字得到的最晚时间</a></h2>
+<p>挨个字符模拟判断即可</p>
+<h2 id="leetcode605种花问题"><a href="https://leetcode-cn.com/problems/can-place-flowers/">leetcode#605.种花问题</a></h2>
+<p>符合种花条件的地块种上即可</p>
+<h2 id="leetcode1221-分割平衡字符串"><a href="https://leetcode-cn.com/problems/split-a-string-in-balanced-strings/">leetcode#1221. 分割平衡字符串</a></h2>
+<p>模拟判断即可</p>
+<h2 id="leetcode1710-卡车上的最大单元数"><a href="https://leetcode-cn.com/problems/maximum-units-on-a-truck/">leetcode#1710. 卡车上的最大单元数</a></h2>
+<p>根据单元数排序，取能装最多单元的箱子装车即可</p>
+<h2 id="leetcode1217-玩筹码"><a href="https://leetcode-cn.com/problems/minimum-cost-to-move-chips-to-the-same-position/">leetcode#1217. 玩筹码</a></h2>
+<p>因为移动两个单位代价为0，将位于【1，3，5，7，...】的无代价移到1，【2，4，6，8，...】的无代价移到2，取位于1，2的筹码数的最小值即可</p>
+<h2 id="leetcode1046-最后一块石头的重量"><a href="https://leetcode-cn.com/problems/last-stone-weight/">leetcode#1046. 最后一块石头的重量</a></h2>
+<p>每次取最大的两个石头，采用最大堆，粉碎后放回去，判断堆中个数即可</p>
+<h2 id="leetcode874-模拟行走机器人"><a href="https://leetcode-cn.com/problems/walking-robot-simulation/">leetcode#874. 模拟行走机器人</a></h2>
+<p>模拟机器人行走，将石头的位置编码并存在hash表中，每走一步判断是否有石头，有就停，执行一条指令后计算距离，取其最大</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[初识动态规划]]></title>
         <id>https://inthowe.github.io/post/DP1/</id>
