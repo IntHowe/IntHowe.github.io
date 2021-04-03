@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://inthowe.github.io</id>
     <title>你看见我小熊么</title>
-    <updated>2021-04-02T06:37:51.768Z</updated>
+    <updated>2021-04-03T06:52:26.907Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://inthowe.github.io"/>
     <link rel="self" href="https://inthowe.github.io/atom.xml"/>
@@ -10,6 +10,34 @@
     <logo>https://inthowe.github.io/images/avatar.png</logo>
     <icon>https://inthowe.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 你看见我小熊么</rights>
+    <entry>
+        <title type="html"><![CDATA[初识分治算法]]></title>
+        <id>https://inthowe.github.io/post/chu-shi-fen-zhi-suan-fa/</id>
+        <link href="https://inthowe.github.io/post/chu-shi-fen-zhi-suan-fa/">
+        </link>
+        <updated>2021-04-03T06:14:57.000Z</updated>
+        <summary type="html"><![CDATA[<p>分而治之，把一个复杂的问题分成两个或更多的相同或相似的子问题，直到最后子问题可以简单的直接求解，原问题的解即子问题的解的合并。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>分而治之，把一个复杂的问题分成两个或更多的相同或相似的子问题，直到最后子问题可以简单的直接求解，原问题的解即子问题的解的合并。</p>
+<!-- more -->
+<h2 id="剑指-offer-25-合并两个排序的链表"><a href="https://leetcode-cn.com/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/">剑指 Offer #25. 合并两个排序的链表</a></h2>
+<p>双指针即可</p>
+<h2 id="剑指-offer-39-数组中出现次数超过一半的数字"><a href="https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/">剑指 Offer #39. 数组中出现次数超过一半的数字</a></h2>
+<p>如果元素a是整个数组的众数，那么将数组一分为二，a也必定至少是其中一部分的众数，所以可以将数组分成左右两部分，分别求出左半部分的众数 a1 以及右半部分的众数 a2，随后在 a1 和 a2 中选出正确的众数。分治递归求解，直到所有的子问题都是长度为 1 的数组。长度为 1 的子数组中唯一的数显然是众数，直接返回即可。如果回溯后某区间的长度大于 1，我们必须将左右子区间的值合并。如果它们的众数相同，那么显然这一段区间的众数是它们相同的值。否则，我们需要比较两个众数在整个区间内出现的次数来决定该区间的众数。</p>
+<h2 id="leetcode169-多数元素"><a href="https://leetcode-cn.com/problems/majority-element/">leetcode#169. 多数元素</a></h2>
+<p>同上</p>
+<h2 id="面试题-1710-主要元素"><a href="https://leetcode-cn.com/problems/find-majority-element-lcci/">面试题 #17.10. 主要元素</a></h2>
+<p>同上，多加一次遍历，判断是否为主要元素</p>
+<h2 id="剑指-offer-40-最小的k个数"><a href="hhttps://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/">剑指 Offer #40. 最小的k个数</a></h2>
+<p>快排的划分函数每次执行完后都能将数组分成两个部分，小于等于分界值 pivot 的元素的都会被放到数组的左边，大于的都会被放到数组的右边，我们只须处理数组左边，利用划分函数进行分治，即可找出k个数，如果左边不足k个，那么再处理右边。</p>
+<h2 id="leetcode53最大子序和"><a href="https://leetcode-cn.com/problems/maximum-subarray/">leetcode#53.最大子序和</a></h2>
+<p>动态规划的方法，f(i) 代表以第 i 个数结尾的「连续子数组的最大和」，只需要求出每个位置的 f(i)，然后返回 f 数组中的最大值即可。f(i)考虑为nums[i] 单独成为一段或者加入 f(i−1) 对应的那一段，这取决于 nums[i] 和 f(i-1) +nums[i] 的大小，取其最大即可。</p>
+<h2 id="剑指-offer-42-连续子数组的最大和"><a href="https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/">剑指 Offer #42. 连续子数组的最大和</a></h2>
+<p>同上</p>
+<h2 id="面试题-1617-连续数列"><a href="https://leetcode-cn.com/problems/contiguous-sequence-lcci/">面试题 #16.17. 连续数列</a></h2>
+<p>同上</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[初识贪心算法]]></title>
         <id>https://inthowe.github.io/post/greedy1/</id>
