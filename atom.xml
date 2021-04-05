@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://inthowe.github.io</id>
     <title>你看见我小熊么</title>
-    <updated>2021-04-05T10:02:59.442Z</updated>
+    <updated>2021-04-05T10:04:27.530Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://inthowe.github.io"/>
     <link rel="self" href="https://inthowe.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2021, 你看见我小熊么</rights>
     <entry>
         <title type="html"><![CDATA[初识分治算法]]></title>
-        <id>https://inthowe.github.io/post/chu-shi-fen-zhi-suan-fa/</id>
-        <link href="https://inthowe.github.io/post/chu-shi-fen-zhi-suan-fa/">
+        <id>https://inthowe.github.io/post/divideAndConquer1/</id>
+        <link href="https://inthowe.github.io/post/divideAndConquer1/">
         </link>
         <updated>2021-04-03T06:14:57.000Z</updated>
         <summary type="html"><![CDATA[<p>分而治之，把一个复杂的问题分成两个或更多的相同或相似的子问题，直到最后子问题可以简单的直接求解，原问题的解即子问题的解的合并。</p>

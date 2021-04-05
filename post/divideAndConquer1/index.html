@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>初识分治算法 | 你看见我小熊么</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://inthowe.github.io/favicon.ico?v=1617617064997">
+<link rel="stylesheet" href="https://inthowe.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="分而治之，把一个复杂的问题分成两个或更多的相同或相似的子问题，直到最后子问题可以简单的直接求解，原问题的解即子问题的解的合并。
+
+好比将一个数组不断进行二分，直至子数组长度为1，求出子数组对应的解，之后两两合并，求出合并后的解，直至合并为原..." />
+    <meta name="keywords" content="分治算法,算法" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://inthowe.github.io">
+        <img src="https://inthowe.github.io/images/avatar.png?v=1617617064997" class="site-logo">
+        <h1 class="site-title">你看见我小熊么</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+        
+          <a href="https://inthowe.github.io/post/Link" class="site-nav">
+            友链
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      别打了！别打了！在学了！
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://inthowe.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">初识分治算法</h2>
+            <div class="post-date">2021-04-03</div>
+            
+            <div class="post-content" v-pre>
+              <p>分而治之，把一个复杂的问题分成两个或更多的相同或相似的子问题，直到最后子问题可以简单的直接求解，原问题的解即子问题的解的合并。</p>
+<!-- more -->
+<p>好比将一个数组不断进行二分，直至子数组长度为1，求出子数组对应的解，之后两两合并，求出合并后的解，直至合并为原来的数组。</p>
+<h2 id="剑指-offer-25-合并两个排序的链表"><a href="https://leetcode-cn.com/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/">剑指 Offer #25. 合并两个排序的链表</a></h2>
+<p>双指针即可</p>
+<h2 id="剑指-offer-39-数组中出现次数超过一半的数字"><a href="https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/">剑指 Offer #39. 数组中出现次数超过一半的数字</a></h2>
+<p>如果元素a是整个数组的众数，那么将数组一分为二，a也必定至少是其中一部分的众数，所以可以将数组分成左右两部分，分别求出左半部分的众数 a1 以及右半部分的众数 a2，随后在 a1 和 a2 中选出正确的众数。分治递归求解，直到所有的子问题都是长度为 1 的数组。长度为 1 的子数组中唯一的数显然是众数，直接返回即可。如果回溯后某区间的长度大于 1，我们必须将左右子区间的值合并。如果它们的众数相同，那么显然这一段区间的众数是它们相同的值。否则，我们需要比较两个众数在整个区间内出现的次数来决定该区间的众数。</p>
+<h2 id="leetcode169-多数元素"><a href="https://leetcode-cn.com/problems/majority-element/">leetcode#169. 多数元素</a></h2>
+<p>同上</p>
+<h2 id="面试题-1710-主要元素"><a href="https://leetcode-cn.com/problems/find-majority-element-lcci/">面试题 #17.10. 主要元素</a></h2>
+<p>同上，多加一次遍历，判断是否为主要元素</p>
+<h2 id="剑指-offer-40-最小的k个数"><a href="hhttps://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/">剑指 Offer #40. 最小的k个数</a></h2>
+<p>快排的划分函数每次执行完后都能将数组分成两个部分，小于等于分界值 pivot 的元素的都会被放到数组的左边，大于的都会被放到数组的右边，我们只须处理数组左边，利用划分函数进行分治，即可找出k个数，如果左边不足k个，那么再处理右边。</p>
+<h2 id="leetcode53最大子序和"><a href="https://leetcode-cn.com/problems/maximum-subarray/">leetcode#53.最大子序和</a></h2>
+<p>动态规划的方法，f(i) 代表以第 i 个数结尾的「连续子数组的最大和」，只需要求出每个位置的 f(i)，然后返回 f 数组中的最大值即可。f(i)考虑为nums[i] 单独成为一段或者加入 f(i−1) 对应的那一段，这取决于 nums[i] 和 f(i-1) +nums[i] 的大小，取其最大即可。</p>
+<h2 id="剑指-offer-42-连续子数组的最大和"><a href="https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/">剑指 Offer #42. 连续子数组的最大和</a></h2>
+<p>同上</p>
+<h2 id="面试题-1617-连续数列"><a href="https://leetcode-cn.com/problems/contiguous-sequence-lcci/">面试题 #16.17. 连续数列</a></h2>
+<p>同上</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://inthowe.github.io/tag/DivideAndConquer/" class="tag">
+                    分治算法
+                  </a>
+                
+                  <a href="https://inthowe.github.io/tag/Algorithm/" class="tag">
+                    算法
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://inthowe.github.io/post/greedy1/">
+                  <h3 class="post-title">
+                    初识贪心算法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '94ec1fd51176ba3adda3',
+        clientSecret: '961116715b7a89cb10a934782a30798bcef32d89',
+        repo: 'inthowe.github.io',
+        owner: 'IntHowe',
+        admin: ['IntHowe'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
