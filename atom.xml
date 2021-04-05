@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://inthowe.github.io</id>
     <title>你看见我小熊么</title>
-    <updated>2021-04-03T06:52:26.907Z</updated>
+    <updated>2021-04-05T10:02:17.286Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://inthowe.github.io"/>
     <link rel="self" href="https://inthowe.github.io/atom.xml"/>
@@ -20,6 +20,7 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>分而治之，把一个复杂的问题分成两个或更多的相同或相似的子问题，直到最后子问题可以简单的直接求解，原问题的解即子问题的解的合并。</p>
 <!-- more -->
+<p>好比将一个数组不断进行二分，直至子数组长度为1，求出子数组对应的解，之后两两合并，求出合并后的解，直至合并为原来的数组。</p>
 <h2 id="剑指-offer-25-合并两个排序的链表"><a href="https://leetcode-cn.com/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/">剑指 Offer #25. 合并两个排序的链表</a></h2>
 <p>双指针即可</p>
 <h2 id="剑指-offer-39-数组中出现次数超过一半的数字"><a href="https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/">剑指 Offer #39. 数组中出现次数超过一半的数字</a></h2>
