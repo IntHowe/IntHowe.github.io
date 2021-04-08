@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>初识分治算法 | 你看见我小熊么</title>
+<title>初识回溯算法 | 你看见我小熊么</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -24,10 +24,13 @@
 
 
 
-    <meta name="description" content="分而治之，把一个复杂的问题分成两个或更多的相同或相似的子问题，直到最后子问题可以简单的直接求解，原问题的解即子问题的解的合并。
+    <meta name="description" content="回溯算法实际上一个类似枚举的搜索尝试过程，主要是在搜索尝试过程中寻找问题的解，当发现已不满足求解条件时，就 “回溯” 返回，尝试别的路径。
 
-好比将一个数组不断进行二分，直至子数组长度为1，求出子数组对应的解，之后两两合并，求出合并后的解，直至合并为原..." />
-    <meta name="keywords" content="分治算法,算法" />
+回溯算法框架如下：
+result = []
+def backtrack(路径, 选择列表):
+  ..." />
+    <meta name="keywords" content="回溯算法,算法" />
   </head>
   <body>
     <div id="app" class="main">
@@ -104,36 +107,77 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">初识分治算法</h2>
-            <div class="post-date">2021-04-03</div>
+            <h2 class="post-title">初识回溯算法</h2>
+            <div class="post-date">2021-04-08</div>
             
             <div class="post-content" v-pre>
-              <p>分而治之，把一个复杂的问题分成两个或更多的相同或相似的子问题，直到最后子问题可以简单的直接求解，原问题的解即子问题的解的合并。</p>
+              <p>回溯算法实际上一个类似枚举的搜索尝试过程，主要是在搜索尝试过程中寻找问题的解，当发现已不满足求解条件时，就 “回溯” 返回，尝试别的路径。</p>
 <!-- more -->
-<p>好比将一个数组不断进行二分，直至子数组长度为1，求出子数组对应的解，之后两两合并，求出合并后的解，直至合并为原来的数组。</p>
-<h2 id="剑指-offer-25-合并两个排序的链表"><a href="https://leetcode-cn.com/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/">剑指 Offer #25. 合并两个排序的链表</a></h2>
-<p>双指针即可</p>
-<h2 id="剑指-offer-39-数组中出现次数超过一半的数字"><a href="https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/">剑指 Offer #39. 数组中出现次数超过一半的数字</a></h2>
-<p>如果元素a是整个数组的众数，那么将数组一分为二，a也必定至少是其中一部分的众数，所以可以将数组分成左右两部分，分别求出左半部分的众数 a1 以及右半部分的众数 a2，随后在 a1 和 a2 中选出正确的众数。分治递归求解，直到所有的子问题都是长度为 1 的数组。长度为 1 的子数组中唯一的数显然是众数，直接返回即可。如果回溯后某区间的长度大于 1，我们必须将左右子区间的值合并。如果它们的众数相同，那么显然这一段区间的众数是它们相同的值。否则，我们需要比较两个众数在整个区间内出现的次数来决定该区间的众数。</p>
-<h2 id="leetcode169-多数元素"><a href="https://leetcode-cn.com/problems/majority-element/">leetcode#169. 多数元素</a></h2>
-<p>同上</p>
-<h2 id="面试题-1710-主要元素"><a href="https://leetcode-cn.com/problems/find-majority-element-lcci/">面试题 #17.10. 主要元素</a></h2>
-<p>同上，多加一次遍历，判断是否为主要元素</p>
-<h2 id="剑指-offer-40-最小的k个数"><a href="hhttps://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/">剑指 Offer #40. 最小的k个数</a></h2>
-<p>快排的划分函数每次执行完后都能将数组分成两个部分，小于等于分界值 pivot 的元素的都会被放到数组的左边，大于的都会被放到数组的右边，我们只须处理数组左边，利用划分函数进行分治，即可找出k个数，如果左边不足k个，那么再处理右边。</p>
-<h2 id="leetcode53最大子序和"><a href="https://leetcode-cn.com/problems/maximum-subarray/">leetcode#53.最大子序和</a></h2>
-<p>动态规划的方法，f(i) 代表以第 i 个数结尾的「连续子数组的最大和」，只需要求出每个位置的 f(i)，然后返回 f 数组中的最大值即可。f(i)考虑为nums[i] 单独成为一段或者加入 f(i−1) 对应的那一段，这取决于 nums[i] 和 f(i-1) +nums[i] 的大小，取其最大即可。</p>
-<h2 id="剑指-offer-42-连续子数组的最大和"><a href="https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/">剑指 Offer #42. 连续子数组的最大和</a></h2>
-<p>同上</p>
-<h2 id="面试题-1617-连续数列"><a href="https://leetcode-cn.com/problems/contiguous-sequence-lcci/">面试题 #16.17. 连续数列</a></h2>
-<p>同上</p>
+<p>回溯算法框架如下：</p>
+<pre><code>result = []
+def backtrack(路径, 选择列表):
+    if 已不满足求解条件:
+        return  //发现已不满足求解条件就回溯
+    if 满足结束条件:
+        result.add(路径)  //满足条件加入结果集
+        return
+    for 选择 in 选择列表:  //枚举
+        backtrack(路径, 选择列表) //搜索尝试
+</code></pre>
+<h2 id="leetcode-401-二进制手表"><a href="https://leetcode-cn.com/problems/binary-watch/">leetcode #401. 二进制手表</a></h2>
+<p>对手表的灯选出n个灯进行一个全排列，每选出一颗灯相当于小时数或分钟数增加对应的数，那么选择过程中如果已经不符合时间要求（小时&gt;11或分钟&gt;59就不需要继续选灯了）就直接回溯，满足则加入结果集。</p>
+<blockquote>
+<p>for循环枚举点亮灯的情况，i从index枚举到10，每次枚举</p>
+<ul>
+<li>减少一个需要点亮的灯数量num - 1</li>
+<li>从当前已点亮的灯后面选取下一个要点亮的灯 i + 1</li>
+<li>在hour中增加当前点亮灯的小时数，如果i大于3，当前灯是分钟灯而不是小时灯，则加上0个小时</li>
+<li>在minute中增加当前点亮灯的分钟数，如果i没有大于3，当前灯是小时灯而不是分钟灯，则加上0分钟</li>
+</ul>
+</blockquote>
+<pre><code>class Solution {
+    int[] h = new int[]{0,0,0,0,0,0,1,2,4,8};  //小时灯对应的数值
+    int[] m = new int[]{1,2,4,8,16,32,0,0,0,0};  //分钟灯对应的数值
+    List&lt;String&gt; res = new ArrayList&lt;&gt;();  //结果集
+    public void backtrack(int num,int index,int hour,int minter) {
+        if(hour &gt; 11 || minter &gt; 59) {
+            return;  //不满足条件的就直接回溯返回
+        }
+        if(num == 0) {  //剩余需要点灯的数目为0则表示以选出n个灯
+            StringBuilder sb = new StringBuilder();
+            sb.append(hour);
+            sb.append(&quot;:&quot;);
+            if(minter &lt; 10) {
+                sb.append(&quot;0&quot;);
+            }
+            sb.append(minter);
+            res.add(sb.toString());  //满足条件则加入结果集
+            return;
+        }
+        for(int i = index;i &lt; 10;i++) {
+            /**
+             * 枚举搜索尝试
+             * 参数：剩余需要点亮灯的数量，从索引index往后亮灯，当前小时数，当前分钟数
+             */
+            backtrack(num - 1,i + 1,hour + h[i],minter + m[i]); 
+        }
+    }
+
+    public List&lt;String&gt; readBinaryWatch(int num) {
+        backtrack(num,0,0,0);
+        return res;
+    }
+}
+</code></pre>
+<h2 id="leetcode-1688-比赛中的配对次数"><a href="https://leetcode-cn.com/problems/count-of-matches-in-tournament/">leetcode #1688. 比赛中的配对次数</a></h2>
+<p>这题为什么会有回溯算法的标签。。。模拟计算即可</p>
 
             </div>
             
               <div class="tag-container">
                 
-                  <a href="https://inthowe.github.io/tag/DivideAndConquer/" class="tag">
-                    分治算法
+                  <a href="https://inthowe.github.io/tag/Backtracking/" class="tag">
+                    回溯算法
                   </a>
                 
                   <a href="https://inthowe.github.io/tag/Algorithm/" class="tag">
@@ -145,9 +189,9 @@
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://inthowe.github.io/post/greedy1/">
+                <a href="https://inthowe.github.io/post/binarySearch1/">
                   <h3 class="post-title">
-                    初识贪心算法
+                    初识二分查找
                   </h3>
                 </a>
               </div>

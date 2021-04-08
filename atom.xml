@@ -2,14 +2,84 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://inthowe.github.io</id>
     <title>你看见我小熊么</title>
-    <updated>2021-04-08T05:29:38.477Z</updated>
+    <updated>2021-04-08T10:21:53.014Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://inthowe.github.io"/>
     <link rel="self" href="https://inthowe.github.io/atom.xml"/>
-    <subtitle>别打了！别打了！在学了！</subtitle>
+    <subtitle>简单题重拳出击，中等题唯唯诺诺，困难题提桶跑路</subtitle>
     <logo>https://inthowe.github.io/images/avatar.png</logo>
     <icon>https://inthowe.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 你看见我小熊么</rights>
+    <entry>
+        <title type="html"><![CDATA[初识回溯算法]]></title>
+        <id>https://inthowe.github.io/post/backtracking1/</id>
+        <link href="https://inthowe.github.io/post/backtracking1/">
+        </link>
+        <updated>2021-04-08T09:35:08.000Z</updated>
+        <summary type="html"><![CDATA[<p>回溯算法实际上一个类似枚举的搜索尝试过程，主要是在搜索尝试过程中寻找问题的解，当发现已不满足求解条件时，就 “回溯” 返回，尝试别的路径。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>回溯算法实际上一个类似枚举的搜索尝试过程，主要是在搜索尝试过程中寻找问题的解，当发现已不满足求解条件时，就 “回溯” 返回，尝试别的路径。</p>
+<!-- more -->
+<p>回溯算法框架如下：</p>
+<pre><code>result = []
+def backtrack(路径, 选择列表):
+    if 已不满足求解条件:
+        return  //发现已不满足求解条件就回溯
+    if 满足结束条件:
+        result.add(路径)  //满足条件加入结果集
+        return
+    for 选择 in 选择列表:  //枚举
+        backtrack(路径, 选择列表) //搜索尝试
+</code></pre>
+<h2 id="leetcode-401-二进制手表"><a href="https://leetcode-cn.com/problems/binary-watch/">leetcode #401. 二进制手表</a></h2>
+<p>对手表的灯选出n个灯进行一个全排列，每选出一颗灯相当于小时数或分钟数增加对应的数，那么选择过程中如果已经不符合时间要求（小时&gt;11或分钟&gt;59就不需要继续选灯了）就直接回溯，满足则加入结果集。</p>
+<blockquote>
+<p>for循环枚举点亮灯的情况，i从index枚举到10，每次枚举</p>
+<ul>
+<li>减少一个需要点亮的灯数量num - 1</li>
+<li>从当前已点亮的灯后面选取下一个要点亮的灯 i + 1</li>
+<li>在hour中增加当前点亮灯的小时数，如果i大于3，当前灯是分钟灯而不是小时灯，则加上0个小时</li>
+<li>在minute中增加当前点亮灯的分钟数，如果i没有大于3，当前灯是小时灯而不是分钟灯，则加上0分钟</li>
+</ul>
+</blockquote>
+<pre><code>class Solution {
+    int[] h = new int[]{0,0,0,0,0,0,1,2,4,8};  //小时灯对应的数值
+    int[] m = new int[]{1,2,4,8,16,32,0,0,0,0};  //分钟灯对应的数值
+    List&lt;String&gt; res = new ArrayList&lt;&gt;();  //结果集
+    public void backtrack(int num,int index,int hour,int minter) {
+        if(hour &gt; 11 || minter &gt; 59) {
+            return;  //不满足条件的就直接回溯返回
+        }
+        if(num == 0) {  //剩余需要点灯的数目为0则表示以选出n个灯
+            StringBuilder sb = new StringBuilder();
+            sb.append(hour);
+            sb.append(&quot;:&quot;);
+            if(minter &lt; 10) {
+                sb.append(&quot;0&quot;);
+            }
+            sb.append(minter);
+            res.add(sb.toString());  //满足条件则加入结果集
+            return;
+        }
+        for(int i = index;i &lt; 10;i++) {
+            /**
+             * 枚举搜索尝试
+             * 参数：剩余需要点亮灯的数量，从索引index往后亮灯，当前小时数，当前分钟数
+             */
+            backtrack(num - 1,i + 1,hour + h[i],minter + m[i]); 
+        }
+    }
+
+    public List&lt;String&gt; readBinaryWatch(int num) {
+        backtrack(num,0,0,0);
+        return res;
+    }
+}
+</code></pre>
+<h2 id="leetcode-1688-比赛中的配对次数"><a href="https://leetcode-cn.com/problems/count-of-matches-in-tournament/">leetcode #1688. 比赛中的配对次数</a></h2>
+<p>这题为什么会有回溯算法的标签。。。模拟计算即可</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[初识二分查找]]></title>
         <id>https://inthowe.github.io/post/binarySearch1/</id>
