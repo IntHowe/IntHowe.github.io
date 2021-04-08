@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://inthowe.github.io</id>
     <title>你看见我小熊么</title>
-    <updated>2021-04-05T12:41:59.534Z</updated>
+    <updated>2021-04-08T05:29:38.477Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://inthowe.github.io"/>
     <link rel="self" href="https://inthowe.github.io/atom.xml"/>
@@ -10,6 +10,76 @@
     <logo>https://inthowe.github.io/images/avatar.png</logo>
     <icon>https://inthowe.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 你看见我小熊么</rights>
+    <entry>
+        <title type="html"><![CDATA[初识二分查找]]></title>
+        <id>https://inthowe.github.io/post/binarySearch1/</id>
+        <link href="https://inthowe.github.io/post/binarySearch1/">
+        </link>
+        <updated>2021-04-06T07:31:01.000Z</updated>
+        <summary type="html"><![CDATA[<p>二分查找要求数据结构必须先排好序，具有有随机访问的特点（例如数组），能够根据中间元素的特点推测它两侧元素的性质，可以在数据规模的对数时间复杂度内完成查找。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>二分查找要求数据结构必须先排好序，具有有随机访问的特点（例如数组），能够根据中间元素的特点推测它两侧元素的性质，可以在数据规模的对数时间复杂度内完成查找。</p>
+<!-- more -->
+<p>二分查找一般写法</p>
+<pre><code>public int lower_bound(int[] nums,int first,int last,int value) {
+    int right = nums.length,left = 0,mid;
+    while(left &lt; right) {
+        mid = left + (right - left) / 2;
+        if(nums[mid] &gt; mid) {
+            right = mid;
+        }else {
+            left = mid + 1;
+        }
+    }
+    return left;
+}
+</code></pre>
+<p>搜索区间左闭右开[left,rifgt)([0,nums.length))</p>
+<h2 id="leetcode-704-二分查找"><a href="https://leetcode-cn.com/problems/binary-search/">leetcode #704. 二分查找</a></h2>
+<p>标准的二分查找题</p>
+<h2 id="剑指-offer-53-i-在排序数组中查找数字-i"><a href="https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/">剑指 Offer #53 - I. 在排序数组中查找数字 I</a></h2>
+<p>二分即可</p>
+<h2 id="leetcode-374-猜数字大小"><a href="https://leetcode-cn.com/problems/guess-number-higher-or-lower/">leetcode #374. 猜数字大小</a></h2>
+<p>二分即可</p>
+<h2 id="leetcode-35-搜索插入位置"><a href="https://leetcode-cn.com/problems/search-insert-position/">leetcode #35. 搜索插入位置</a></h2>
+<p>二分即可</p>
+<h2 id="leetcode-744-寻找比目标字母大的最小字母"><a href="https://leetcode-cn.com/problems/find-smallest-letter-greater-than-target/">leetcode #744. 寻找比目标字母大的最小字母</a></h2>
+<p>二分即可</p>
+<h2 id="剑指-offer-53-ii-0~n-1中缺失的数字"><a href="https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/">剑指 Offer #53 - II. 0～n-1中缺失的数字</a></h2>
+<p>下标与值进行比较，二分即可</p>
+<h2 id="leetcode-367-有效的完全平方数"><a href="https://leetcode-cn.com/problems/valid-perfect-square/">leetcode #367. 有效的完全平方数</a></h2>
+<p>二分即可</p>
+<h2 id="leetcode-278-第一个错误的版本"><a href="https://leetcode-cn.com/problems/first-bad-version/">leetcode #278. 第一个错误的版本</a></h2>
+<p>二分即可</p>
+<h2 id="leetcode-441-排列硬币"><a href="https://leetcode-cn.com/problems/arranging-coins/">leetcode #441. 排列硬币</a></h2>
+<p>等差数列求和公式，二分即可</p>
+<h2 id="leetcode-69-x-的平方根"><a href="https://leetcode-cn.com/problems/sqrtx/">leetcode #69. x 的平方根</a></h2>
+<p>二分即可</p>
+<h2 id="剑指-offer-53-ii-0~n-1中缺失的数字-2"><a href="https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/">剑指 Offer #53 - II. 0～n-1中缺失的数字</a></h2>
+<p>二分即可</p>
+<h2 id="面试题-1005-稀疏数组搜索"><a href="https://leetcode-cn.com/problems/sparse-array-search-lcci/">面试题 #10.05. 稀疏数组搜索</a></h2>
+<p>如果mid为空字符串时，用双指针向前向后查找非空字符串，找到后与查找的字符串进行比较，判断查找的字符串位于哪个区间</p>
+<h2 id="leetcode-350-两个数组的交集-ii"><a href="https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/">leetcode #350. 两个数组的交集 II</a></h2>
+<p>这道题居然会有二分的标签。。。。第一个数组用hash表储存元素及个数，遍历第二个数组，依次在hash表中查找是否有相同的元素，存在则加入结果集，并将对应的个数减一，为0则移除。</p>
+<h2 id="剑指-offer-11-旋转数组的最小数字"><a href="https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/">剑指 Offer #11. 旋转数组的最小数字</a></h2>
+<p>二分后中点值与右端值进行比较，中点值&gt;右端值则left = mid；中点值&lt;右端值则right = mid；中点值=右端值则right--（此时无法判断中点是在最小值的左侧还是右侧）；</p>
+<h2 id="leetcode-167-两数之和-ii-输入有序数组"><a href="https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/">leetcode #167. 两数之和 II - 输入有序数组</a></h2>
+<p>遍历该数组，在该元素的右侧用二分查找是否有符合的元素</p>
+<h2 id="leetcode-1337-矩阵中战斗力最弱的-k-行"><a href="https://leetcode-cn.com/problems/the-k-weakest-rows-in-a-matrix/">leetcode #1337. 矩阵中战斗力最弱的 K 行</a></h2>
+<p>用二分计算每行所拥有的战斗力，用二维数组储存战斗力及所在的行，排序，取前k个</p>
+<h2 id="leetcode-852-山脉数组的峰顶索引"><a href="https://leetcode-cn.com/problems/peak-index-in-a-mountain-array/">leetcode #852. 山脉数组的峰顶索引</a></h2>
+<p>二分查找中点，中点与旁边进行比较即可判断位于顶点的左侧还是右侧</p>
+<h2 id="leetcode-1351-统计有序矩阵中的负数"><a href="https://leetcode-cn.com/problems/count-negative-numbers-in-a-sorted-matrix/">leetcode #1351. 统计有序矩阵中的负数</a></h2>
+<p>行和列都有序，对行头进行一次二分查找，找出首个行头为负的行，该行头后续的数字皆为负数，<br>
+再对第一行至改行的每一行进行一次二分查找，统计负数个数。</p>
+<h2 id="leetcode-349-两个数组的交集"><a href="https://leetcode-cn.com/problems/intersection-of-two-arrays/">leetcode #349. 两个数组的交集</a></h2>
+<p>这道题居然会有二分的标签。。。。第一个数组用hashset储存元素，遍历第二个数组，依次在hashset中查找是否有相同的元素，存在则加入结果集。</p>
+<h2 id="leetcode-392判断子序列"><a href="https://leetcode-cn.com/problems/is-subsequence/">leetcode #392.判断子序列</a></h2>
+<p>这道题居然会有二分的标签。。。。动态规划这是</p>
+<h2 id="面试题-0803-魔术索引"><a href="https://leetcode-cn.com/problems/magic-index-lcci/">面试题 #08.03. 魔术索引</a></h2>
+<p>二分查找在最差的情况与遍历无异。。。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[初识分治算法]]></title>
         <id>https://inthowe.github.io/post/divideAndConquer1/</id>
