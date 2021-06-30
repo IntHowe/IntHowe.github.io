@@ -1,22 +1,113 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://inthowe.github.io</id>
-    <title>你看见我小熊么</title>
-    <updated>2021-06-30T13:39:39.124Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://inthowe.github.io"/>
-    <link rel="self" href="https://inthowe.github.io/atom.xml"/>
-    <subtitle>简单题重拳出击，中等题唯唯诺诺，困难题提桶跑路</subtitle>
-    <logo>https://inthowe.github.io/images/avatar.png</logo>
-    <icon>https://inthowe.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, 你看见我小熊么</rights>
-    <entry>
-        <title type="html"><![CDATA[一、图与子图]]></title>
-        <id>https://inthowe.github.io/post/GraphsAndSubgraphs/</id>
-        <link href="https://inthowe.github.io/post/GraphsAndSubgraphs/">
-        </link>
-        <updated>2021-06-28T06:56:57.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="11图和简单图">1.1图和简单图</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>一、图与子图 | 你看见我小熊么</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://inthowe.github.io/favicon.ico?v=1625060370944">
+<link rel="stylesheet" href="https://inthowe.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="1.1图和简单图
+一个图GGG是指一个有序三元组(V(G)V(G)V(G),E(G)E(G)E(G),ψG\psi_GψG​)，其中V(G)V(G)V(G)是非空的顶点集，E(G)E(G)E(G)是不与V(G)V(G)V(G)相交的边集，而..." />
+    <meta name="keywords" content="图论,GTWA" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://inthowe.github.io">
+        <img src="https://inthowe.github.io/images/avatar.png?v=1625060370944" class="site-logo">
+        <h1 class="site-title">你看见我小熊么</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+        
+          <a href="https://inthowe.github.io/post/Link" class="site-nav">
+            友链
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      简单题重拳出击，中等题唯唯诺诺，困难题提桶跑路
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://inthowe.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">一、图与子图</h2>
+            <div class="post-date">2021-06-28</div>
+            
+            <div class="post-content" v-pre>
+              <h1 id="11图和简单图">1.1图和简单图</h1>
 <p>一个图<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">G</span></span></span></span>是指一个有序三元组(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi><mo>(</mo><mi>G</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">V(G)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mopen">(</span><span class="mord mathdefault">G</span><span class="mclose">)</span></span></span></span>,<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi><mo>(</mo><mi>G</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">E(G)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mopen">(</span><span class="mord mathdefault">G</span><span class="mclose">)</span></span></span></span>,<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>ψ</mi><mi>G</mi></msub></mrow><annotation encoding="application/x-tex">\psi_G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">ψ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>)，其中<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi><mo>(</mo><mi>G</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">V(G)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mopen">(</span><span class="mord mathdefault">G</span><span class="mclose">)</span></span></span></span>是非空的顶点集，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi><mo>(</mo><mi>G</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">E(G)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mopen">(</span><span class="mord mathdefault">G</span><span class="mclose">)</span></span></span></span>是不与<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi><mo>(</mo><mi>G</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">V(G)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mopen">(</span><span class="mord mathdefault">G</span><span class="mclose">)</span></span></span></span>相交的边集，而<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>ψ</mi><mi>G</mi></msub></mrow><annotation encoding="application/x-tex">\psi_G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">ψ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>是关联函数，它使<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">G</span></span></span></span>的每条边对应于<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">G</span></span></span></span>的无序顶点对（不必相异），若<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">e</span></span></span></span>是一条边，而<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>u</mi></mrow><annotation encoding="application/x-tex">u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">u</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span></span></span></span>是使得<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>ψ</mi><mi>G</mi></msub><mo>(</mo><mi>e</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\psi_G(e)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">ψ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">e</span><span class="mclose">)</span></span></span></span>=<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>u</mi><mi>v</mi></mrow><annotation encoding="application/x-tex">uv</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span></span></span></span>的顶点，则称<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">e</span></span></span></span>连接<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>u</mi></mrow><annotation encoding="application/x-tex">u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">u</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span></span></span></span>；顶点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>u</mi></mrow><annotation encoding="application/x-tex">u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">u</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span></span></span></span>称为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">e</span></span></span></span>的端点。</p>
 <h2 id="例1">例1</h2>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">G</span></span></span></span>=(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span></span></span></span>(G),<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span></span></span></span>(G),<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>ψ</mi><mi>G</mi></msub></mrow><annotation encoding="application/x-tex">\psi_G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">ψ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">G</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>)<br>
@@ -143,555 +234,92 @@
 <p><strong>Brouwer不动点定理</strong><br>
 对于一个拓扑空间中满足一定条件的连续函数<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span></span></span></span>，存在一个点 ，使得 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>)</mo><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">f(x_0) = x_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>。<br>
 证：在2维单形（闭三角形中），用Sperner引理，不断在可识别三角形中再次使用Sperner引理，取极限，又<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">S_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>是闭的，所以存在<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><msub><mi>a</mi><mn>0</mn></msub><mo separator="true">,</mo><msub><mi>a</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>)</mo><mo>∈</mo><msub><mi>S</mi><mn>0</mn></msub><mo>⋂</mo><msub><mi>S</mi><mn>1</mn></msub><mo>⋂</mo><msub><mi>S</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">(a_0,a_1,a_2) \in S_0 \bigcap S_1 \bigcap S_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">⋂</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">⋂</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，即<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>a</mi><mi>i</mi><mo mathvariant="normal">′</mo></msubsup><mo>≤</mo><msub><mi>a</mi><mi>i</mi></msub><mo>(</mo><mi>i</mi><mo>=</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">a_i&#x27; \leq a_i(i = 0,1,2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.010556em;vertical-align:-0.258664em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-2.441336em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.258664em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span class="mclose">)</span></span></span></span>，又<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∑</mo><msubsup><mi>a</mi><mi>i</mi><mo mathvariant="normal">′</mo></msubsup><mo>=</mo><mo>∑</mo><msub><mi>a</mi><mi>i</mi></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\sum a_i&#x27; = \sum a_i = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.010556em;vertical-align:-0.258664em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-2.441336em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.258664em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>，所以<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><msub><mi>a</mi><mn>0</mn></msub><mo separator="true">,</mo><msub><mi>a</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>)</mo><mo>=</mo><mo>(</mo><msubsup><mi>a</mi><mn>0</mn><mo mathvariant="normal">′</mo></msubsup><mo separator="true">,</mo><msubsup><mi>a</mi><mn>1</mn><mo mathvariant="normal">′</mo></msubsup><mo separator="true">,</mo><msubsup><mi>a</mi><mn>2</mn><mo mathvariant="normal">′</mo></msubsup><mo>)</mo></mrow><annotation encoding="application/x-tex">(a_0,a_1,a_2) = (a_0&#x27;,a_1&#x27;,a_2&#x27;)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-2.4518920000000004em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.24810799999999997em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-2.4518920000000004em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.24810799999999997em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-2.4518920000000004em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.24810799999999997em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[初识回溯算法]]></title>
-        <id>https://inthowe.github.io/post/backtracking1/</id>
-        <link href="https://inthowe.github.io/post/backtracking1/">
-        </link>
-        <updated>2021-04-08T09:35:08.000Z</updated>
-        <summary type="html"><![CDATA[<p>回溯算法实际上一个类似枚举的搜索尝试过程，主要是在搜索尝试过程中寻找问题的解，当发现已不满足求解条件时，就 “回溯” 返回，尝试别的路径。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>回溯算法实际上一个类似枚举的搜索尝试过程，主要是在搜索尝试过程中寻找问题的解，当发现已不满足求解条件时，就 “回溯” 返回，尝试别的路径。</p>
-<!-- more -->
-<p>回溯算法框架如下：</p>
-<pre><code>result = []
-def backtrack(路径, 选择列表):
-    if 已不满足求解条件:
-        return  //发现已不满足求解条件就回溯
-    if 满足结束条件:
-        result.add(路径)  //满足条件加入结果集
-        return
-    for 选择 in 选择列表:  //枚举
-        backtrack(路径, 选择列表) //搜索尝试
-</code></pre>
-<h2 id="leetcode-401-二进制手表"><a href="https://leetcode-cn.com/problems/binary-watch/">leetcode #401. 二进制手表</a></h2>
-<p>对手表的灯选出n个灯进行一个全排列，每选出一颗灯相当于小时数或分钟数增加对应的数，那么选择过程中如果已经不符合时间要求（小时&gt;11或分钟&gt;59就不需要继续选灯了）就直接回溯，满足则加入结果集。</p>
-<blockquote>
-<p>for循环枚举点亮灯的情况，i从index枚举到10，每次枚举</p>
-<ul>
-<li>减少一个需要点亮的灯数量num - 1</li>
-<li>从当前已点亮的灯后面选取下一个要点亮的灯 i + 1</li>
-<li>在hour中增加当前点亮灯的小时数，如果i大于3，当前灯是分钟灯而不是小时灯，则加上0个小时</li>
-<li>在minute中增加当前点亮灯的分钟数，如果i没有大于3，当前灯是小时灯而不是分钟灯，则加上0分钟</li>
-</ul>
-</blockquote>
-<pre><code>class Solution {
-    int[] h = new int[]{0,0,0,0,0,0,1,2,4,8};  //小时灯对应的数值
-    int[] m = new int[]{1,2,4,8,16,32,0,0,0,0};  //分钟灯对应的数值
-    List&lt;String&gt; res = new ArrayList&lt;&gt;();  //结果集
-    public void backtrack(int num,int index,int hour,int minter) {
-        if(hour &gt; 11 || minter &gt; 59) {
-            return;  //不满足条件的就直接回溯返回
-        }
-        if(num == 0) {  //剩余需要点灯的数目为0则表示以选出n个灯
-            StringBuilder sb = new StringBuilder();
-            sb.append(hour);
-            sb.append(&quot;:&quot;);
-            if(minter &lt; 10) {
-                sb.append(&quot;0&quot;);
-            }
-            sb.append(minter);
-            res.add(sb.toString());  //满足条件则加入结果集
-            return;
-        }
-        for(int i = index;i &lt; 10;i++) {
-            /**
-             * 枚举搜索尝试
-             * 参数：剩余需要点亮灯的数量，从索引index往后亮灯，当前小时数，当前分钟数
-             */
-            backtrack(num - 1,i + 1,hour + h[i],minter + m[i]); 
-        }
-    }
 
-    public List&lt;String&gt; readBinaryWatch(int num) {
-        backtrack(num,0,0,0);
-        return res;
-    }
-}
-</code></pre>
-<h2 id="leetcode-1688-比赛中的配对次数"><a href="https://leetcode-cn.com/problems/count-of-matches-in-tournament/">leetcode #1688. 比赛中的配对次数</a></h2>
-<p>这题为什么会有回溯算法的标签。。。模拟计算即可</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[初识二分查找]]></title>
-        <id>https://inthowe.github.io/post/binarySearch1/</id>
-        <link href="https://inthowe.github.io/post/binarySearch1/">
-        </link>
-        <updated>2021-04-06T07:31:01.000Z</updated>
-        <summary type="html"><![CDATA[<p>二分查找要求数据结构必须先排好序，具有有随机访问的特点（例如数组），能够根据中间元素的特点推测它两侧元素的性质，可以在数据规模的对数时间复杂度内完成查找。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>二分查找要求数据结构必须先排好序，具有有随机访问的特点（例如数组），能够根据中间元素的特点推测它两侧元素的性质，可以在数据规模的对数时间复杂度内完成查找。</p>
-<!-- more -->
-<p>二分查找一般写法</p>
-<pre><code>public int lower_bound(int[] nums,int first,int last,int value) {
-    int right = nums.length,left = 0,mid;
-    while(left &lt; right) {
-        mid = left + (right - left) / 2;
-        if(nums[mid] &gt; mid) {
-            right = mid;
-        }else {
-            left = mid + 1;
-        }
-    }
-    return left;
-}
-</code></pre>
-<p>搜索区间左闭右开[left,rifgt)([0,nums.length))</p>
-<h2 id="leetcode-704-二分查找"><a href="https://leetcode-cn.com/problems/binary-search/">leetcode #704. 二分查找</a></h2>
-<p>标准的二分查找题</p>
-<h2 id="剑指-offer-53-i-在排序数组中查找数字-i"><a href="https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/">剑指 Offer #53 - I. 在排序数组中查找数字 I</a></h2>
-<p>二分即可</p>
-<h2 id="leetcode-374-猜数字大小"><a href="https://leetcode-cn.com/problems/guess-number-higher-or-lower/">leetcode #374. 猜数字大小</a></h2>
-<p>二分即可</p>
-<h2 id="leetcode-35-搜索插入位置"><a href="https://leetcode-cn.com/problems/search-insert-position/">leetcode #35. 搜索插入位置</a></h2>
-<p>二分即可</p>
-<h2 id="leetcode-744-寻找比目标字母大的最小字母"><a href="https://leetcode-cn.com/problems/find-smallest-letter-greater-than-target/">leetcode #744. 寻找比目标字母大的最小字母</a></h2>
-<p>二分即可</p>
-<h2 id="剑指-offer-53-ii-0~n-1中缺失的数字"><a href="https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/">剑指 Offer #53 - II. 0～n-1中缺失的数字</a></h2>
-<p>下标与值进行比较，二分即可</p>
-<h2 id="leetcode-367-有效的完全平方数"><a href="https://leetcode-cn.com/problems/valid-perfect-square/">leetcode #367. 有效的完全平方数</a></h2>
-<p>二分即可</p>
-<h2 id="leetcode-278-第一个错误的版本"><a href="https://leetcode-cn.com/problems/first-bad-version/">leetcode #278. 第一个错误的版本</a></h2>
-<p>二分即可</p>
-<h2 id="leetcode-441-排列硬币"><a href="https://leetcode-cn.com/problems/arranging-coins/">leetcode #441. 排列硬币</a></h2>
-<p>等差数列求和公式，二分即可</p>
-<h2 id="leetcode-69-x-的平方根"><a href="https://leetcode-cn.com/problems/sqrtx/">leetcode #69. x 的平方根</a></h2>
-<p>二分即可</p>
-<h2 id="剑指-offer-53-ii-0~n-1中缺失的数字-2"><a href="https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/">剑指 Offer #53 - II. 0～n-1中缺失的数字</a></h2>
-<p>二分即可</p>
-<h2 id="面试题-1005-稀疏数组搜索"><a href="https://leetcode-cn.com/problems/sparse-array-search-lcci/">面试题 #10.05. 稀疏数组搜索</a></h2>
-<p>如果mid为空字符串时，用双指针向前向后查找非空字符串，找到后与查找的字符串进行比较，判断查找的字符串位于哪个区间</p>
-<h2 id="leetcode-350-两个数组的交集-ii"><a href="https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/">leetcode #350. 两个数组的交集 II</a></h2>
-<p>这道题居然会有二分的标签。。。。第一个数组用hash表储存元素及个数，遍历第二个数组，依次在hash表中查找是否有相同的元素，存在则加入结果集，并将对应的个数减一，为0则移除。</p>
-<h2 id="剑指-offer-11-旋转数组的最小数字"><a href="https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/">剑指 Offer #11. 旋转数组的最小数字</a></h2>
-<p>二分后中点值与右端值进行比较，中点值&gt;右端值则left = mid；中点值&lt;右端值则right = mid；中点值=右端值则right--（此时无法判断中点是在最小值的左侧还是右侧）；</p>
-<h2 id="leetcode-167-两数之和-ii-输入有序数组"><a href="https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/">leetcode #167. 两数之和 II - 输入有序数组</a></h2>
-<p>遍历该数组，在该元素的右侧用二分查找是否有符合的元素</p>
-<h2 id="leetcode-1337-矩阵中战斗力最弱的-k-行"><a href="https://leetcode-cn.com/problems/the-k-weakest-rows-in-a-matrix/">leetcode #1337. 矩阵中战斗力最弱的 K 行</a></h2>
-<p>用二分计算每行所拥有的战斗力，用二维数组储存战斗力及所在的行，排序，取前k个</p>
-<h2 id="leetcode-852-山脉数组的峰顶索引"><a href="https://leetcode-cn.com/problems/peak-index-in-a-mountain-array/">leetcode #852. 山脉数组的峰顶索引</a></h2>
-<p>二分查找中点，中点与旁边进行比较即可判断位于顶点的左侧还是右侧</p>
-<h2 id="leetcode-1351-统计有序矩阵中的负数"><a href="https://leetcode-cn.com/problems/count-negative-numbers-in-a-sorted-matrix/">leetcode #1351. 统计有序矩阵中的负数</a></h2>
-<p>行和列都有序，对行头进行一次二分查找，找出首个行头为负的行，该行头后续的数字皆为负数，<br>
-再对第一行至改行的每一行进行一次二分查找，统计负数个数。</p>
-<h2 id="leetcode-349-两个数组的交集"><a href="https://leetcode-cn.com/problems/intersection-of-two-arrays/">leetcode #349. 两个数组的交集</a></h2>
-<p>这道题居然会有二分的标签。。。。第一个数组用hashset储存元素，遍历第二个数组，依次在hashset中查找是否有相同的元素，存在则加入结果集。</p>
-<h2 id="leetcode-392判断子序列"><a href="https://leetcode-cn.com/problems/is-subsequence/">leetcode #392.判断子序列</a></h2>
-<p>这道题居然会有二分的标签。。。。动态规划这是</p>
-<h2 id="面试题-0803-魔术索引"><a href="https://leetcode-cn.com/problems/magic-index-lcci/">面试题 #08.03. 魔术索引</a></h2>
-<p>二分查找在最差的情况与遍历无异。。。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[初识分治算法]]></title>
-        <id>https://inthowe.github.io/post/divideAndConquer1/</id>
-        <link href="https://inthowe.github.io/post/divideAndConquer1/">
-        </link>
-        <updated>2021-04-03T06:14:57.000Z</updated>
-        <summary type="html"><![CDATA[<p>分而治之，把一个复杂的问题分成两个或更多的相同或相似的子问题，直到最后子问题可以简单的直接求解，原问题的解即子问题的解的合并。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>分而治之，把一个复杂的问题分成两个或更多的相同或相似的子问题，直到最后子问题可以简单的直接求解，原问题的解即子问题的解的合并。</p>
-<!-- more -->
-<p>好比将一个数组不断进行二分，直至子数组长度为1，求出子数组对应的解，之后两两合并，求出合并后的解，直至合并为原来的数组。</p>
-<h2 id="剑指-offer-25-合并两个排序的链表"><a href="https://leetcode-cn.com/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/">剑指 Offer #25. 合并两个排序的链表</a></h2>
-<p>双指针即可</p>
-<h2 id="剑指-offer-39-数组中出现次数超过一半的数字"><a href="https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/">剑指 Offer #39. 数组中出现次数超过一半的数字</a></h2>
-<p>如果元素a是整个数组的众数，那么将数组一分为二，a也必定至少是其中一部分的众数，所以可以将数组分成左右两部分，分别求出左半部分的众数 a1 以及右半部分的众数 a2，随后在 a1 和 a2 中选出正确的众数。分治递归求解，直到所有的子问题都是长度为 1 的数组。长度为 1 的子数组中唯一的数显然是众数，直接返回即可。如果回溯后某区间的长度大于 1，我们必须将左右子区间的值合并。如果它们的众数相同，那么显然这一段区间的众数是它们相同的值。否则，我们需要比较两个众数在整个区间内出现的次数来决定该区间的众数。</p>
-<h2 id="leetcode169-多数元素"><a href="https://leetcode-cn.com/problems/majority-element/">leetcode#169. 多数元素</a></h2>
-<p>同上</p>
-<h2 id="面试题-1710-主要元素"><a href="https://leetcode-cn.com/problems/find-majority-element-lcci/">面试题 #17.10. 主要元素</a></h2>
-<p>同上，多加一次遍历，判断是否为主要元素</p>
-<h2 id="剑指-offer-40-最小的k个数"><a href="hhttps://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/">剑指 Offer #40. 最小的k个数</a></h2>
-<p>快排的划分函数每次执行完后都能将数组分成两个部分，小于等于分界值 pivot 的元素的都会被放到数组的左边，大于的都会被放到数组的右边，我们只须处理数组左边，利用划分函数进行分治，即可找出k个数，如果左边不足k个，那么再处理右边。</p>
-<h2 id="leetcode53最大子序和"><a href="https://leetcode-cn.com/problems/maximum-subarray/">leetcode#53.最大子序和</a></h2>
-<p>动态规划的方法，f(i) 代表以第 i 个数结尾的「连续子数组的最大和」，只需要求出每个位置的 f(i)，然后返回 f 数组中的最大值即可。f(i)考虑为nums[i] 单独成为一段或者加入 f(i−1) 对应的那一段，这取决于 nums[i] 和 f(i-1) +nums[i] 的大小，取其最大即可。</p>
-<h2 id="剑指-offer-42-连续子数组的最大和"><a href="https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/">剑指 Offer #42. 连续子数组的最大和</a></h2>
-<p>同上</p>
-<h2 id="面试题-1617-连续数列"><a href="https://leetcode-cn.com/problems/contiguous-sequence-lcci/">面试题 #16.17. 连续数列</a></h2>
-<p>同上</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[初识贪心算法]]></title>
-        <id>https://inthowe.github.io/post/greedy1/</id>
-        <link href="https://inthowe.github.io/post/greedy1/">
-        </link>
-        <updated>2021-04-02T05:43:49.000Z</updated>
-        <summary type="html"><![CDATA[<p>感觉贪心算法更倾向于是一种策略。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>感觉贪心算法更倾向于是一种策略。</p>
-<!-- more -->
-<p>从leetcode简单题中感受不到贪心算法。。。感觉是根据题目所做出的策略。</p>
-<h2 id="leetcode1725-可以形成最大正方形的矩形数目"><a href="https://leetcode-cn.com/problems/number-of-rectangles-that-can-form-the-largest-square/">leetcode#1725. 可以形成最大正方形的矩形数目</a></h2>
-<p>找出每组最小值，再依次遍历最小值，记录其中的最大值及其出现次数，出现更大的值就修改最大值并将次数置为1。</p>
-<h2 id="leetcode944-删列造序"><a href="https://leetcode-cn.com/problems/delete-columns-to-make-sorted/">leetcode#944. 删列造序</a></h2>
-<p>记录“不是按字典序升序排列的列”的列数</p>
-<h2 id="leetcode1403-非递增顺序的最小子序列"><a href="https://leetcode-cn.com/problems/minimum-subsequence-in-non-increasing-order/">leetcode#1403. 非递增顺序的最小子序列</a></h2>
-<p>排序后，依次提取最大值放入子序列，判断子序列的元素之和是否大于未包含在该子序列中的各元素之和</p>
-<h2 id="leetcode1716-计算力扣银行的钱"><a href="https://leetcode-cn.com/problems/calculate-money-in-leetcode-bank/">leetcode#1716. 计算力扣银行的钱</a></h2>
-<p>对7求余和商，递增即可</p>
-<h2 id="leetcode1518-换酒问题"><a href="https://leetcode-cn.com/problems/water-bottles/">leetcode#1518. 换酒问题</a></h2>
-<p>空酒瓶数应为空酒瓶数数对numExchange的商加余数，不断兑换直至空酒瓶数小于numExchange</p>
-<h2 id="leetcode122-买卖股票的最佳时机-ii"><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/">leetcode#122. 买卖股票的最佳时机 II</a></h2>
-<p>不限次数买卖，那只要是比前一天的股价高即可进行一轮买卖，计算其差价即可</p>
-<h2 id="leetcode1758-生成交替二进制字符串的最少操作数"><a href="https://leetcode-cn.com/problems/minimum-changes-to-make-alternating-binary-string/">leetcode#1758. 生成交替二进制字符串的最少操作数</a></h2>
-<p>交替字符串只有两种&quot;1010....&quot;和&quot;0101...&quot;，分别比较和这两字符串相差多少个字符，取其最小值</p>
-<h2 id="leetcode860柠檬水找零"><a href="https://leetcode-cn.com/problems/lemonade-change/">leetcode#860.柠檬水找零</a></h2>
-<p>模拟并尽可能找大钞即可</p>
-<h2 id="leetcode455-分发饼干"><a href="https://leetcode-cn.com/problems/assign-cookies/">leetcode#455. 分发饼干</a></h2>
-<p>小朋友和饼干排序，尽可能给最小尺寸的饼干即可</p>
-<h2 id="leetcode1005-k-次取反后最大化的数组和"><a href="https://leetcode-cn.com/problems/maximize-sum-of-array-after-k-negations/">leetcode#1005. K 次取反后最大化的数组和</a></h2>
-<p>排序，从最小的负数开始取反，取反后还有次数就再排序，只对最小的数反复取反，判断单双即可</p>
-<h2 id="leetcode1784-检查二进制字符串字段"><a href="https://leetcode-cn.com/problems/check-if-binary-string-has-at-most-one-segment-of-ones/">leetcode#1784. 检查二进制字符串字段</a></h2>
-<p>模拟判断即可</p>
-<h2 id="leetcode1736-替换隐藏数字得到的最晚时间"><a href="https://leetcode-cn.com/problems/latest-time-by-replacing-hidden-digits/">leetcode#1736. 替换隐藏数字得到的最晚时间</a></h2>
-<p>挨个字符模拟判断即可</p>
-<h2 id="leetcode605种花问题"><a href="https://leetcode-cn.com/problems/can-place-flowers/">leetcode#605.种花问题</a></h2>
-<p>符合种花条件的地块种上即可</p>
-<h2 id="leetcode1221-分割平衡字符串"><a href="https://leetcode-cn.com/problems/split-a-string-in-balanced-strings/">leetcode#1221. 分割平衡字符串</a></h2>
-<p>模拟判断即可</p>
-<h2 id="leetcode1710-卡车上的最大单元数"><a href="https://leetcode-cn.com/problems/maximum-units-on-a-truck/">leetcode#1710. 卡车上的最大单元数</a></h2>
-<p>根据单元数排序，取能装最多单元的箱子装车即可</p>
-<h2 id="leetcode1217-玩筹码"><a href="https://leetcode-cn.com/problems/minimum-cost-to-move-chips-to-the-same-position/">leetcode#1217. 玩筹码</a></h2>
-<p>因为移动两个单位代价为0，将位于【1，3，5，7，...】的无代价移到1，【2，4，6，8，...】的无代价移到2，取位于1，2的筹码数的最小值即可</p>
-<h2 id="leetcode1046-最后一块石头的重量"><a href="https://leetcode-cn.com/problems/last-stone-weight/">leetcode#1046. 最后一块石头的重量</a></h2>
-<p>每次取最大的两个石头，采用最大堆，粉碎后放回去，判断堆中个数即可</p>
-<h2 id="leetcode874-模拟行走机器人"><a href="https://leetcode-cn.com/problems/walking-robot-simulation/">leetcode#874. 模拟行走机器人</a></h2>
-<p>模拟机器人行走，将石头的位置编码并存在hash表中，每走一步判断是否有石头，有就停，执行一条指令后计算距离，取其最大</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[初识动态规划]]></title>
-        <id>https://inthowe.github.io/post/DP1/</id>
-        <link href="https://inthowe.github.io/post/DP1/">
-        </link>
-        <updated>2021-03-09T06:12:07.000Z</updated>
-        <summary type="html"><![CDATA[<p>动态规划是一种特殊的分治思想，用一种可变的表格（多为一维数组或二维数组）来存储子问题的计算结果，避免后续重复计算已经计算过的子问题，进而实现时间复杂度的优化。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>动态规划是一种特殊的分治思想，用一种可变的表格（多为一维数组或二维数组）来存储子问题的计算结果，避免后续重复计算已经计算过的子问题，进而实现时间复杂度的优化。</p>
-<!-- more -->
-<h1 id="动态规划步骤">动态规划步骤</h1>
-<ol>
-<li>动态规划类似于数学归纳法，为了解决一个问题，把它分解成若干个与此问题相似的子问题，当我们要计算dp[n]，可以通过dp[n - 1]，dp[n - 2]......dp[1]推出dp[n]，我们必须要找到子问题之间的关系，如dp[n] = dp[n - 1] + dp[n - 2]。</li>
-<li>通过表格储存各个子问题的计算结果。</li>
-<li>找出初始值，如dp[n] = dp[n - 1] + dp[n - 2]，dp[1]和dp[2]我们无法通过前面的关系式进行分解，所以我们需要找出dp[1]和dp[2]的初始值，这样就可以计算出dp[3]，dp[4]...dp[n]的值。</li>
-</ol>
-<h1 id="举个例子">举个例子</h1>
-<h2 id="leetcode70-爬楼梯"><a href="https://leetcode-cn.com/problems/climbing-stairs/">leetcode#70. 爬楼梯</a></h2>
-<blockquote>
-<p>假设你正在爬楼梯。需要 n 阶你才能到达楼顶。<br>
-每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？<br>
-注意：给定 n 是一个正整数。<br>
-示例：<br>
-输入： 3<br>
-输出： 3<br>
-解释： 有三种方法可以爬到楼顶。<br>
-1 阶 + 2 阶<br>
-1 阶 + 1 阶 + 1 阶<br>
-2 阶 + 1 阶</p>
-</blockquote>
-<ol>
-<li>首先将问题分解成多个子问题，最终的结果是我们需要跳上第n阶楼梯，那么我们一共哪几种方法跳上第n阶楼梯呢？我们每次只能爬1个或2个台阶，也就是说我们只能从第n - 1阶楼梯爬1个台阶或从第n - 2阶楼梯爬2个台阶爬上第n阶楼梯。</li>
-</ol>
-<blockquote>
-<p>假设是3阶楼梯，那我们就只能从第2阶楼梯爬1个台阶或第1阶梯爬2个台阶爬上第3阶楼梯，不存在其它的情况。<br>
-易得，爬1阶楼梯只有1种方法（爬1个台阶），爬2阶楼梯只有2种方法（1 阶 + 1 阶或者2 阶）<br>
-那爬3阶楼梯的方法数应当等于爬1阶楼梯和爬2阶楼梯的方法数总和，我们从示例中可以简单看出。</p>
-<blockquote>
-<p>（注：从1阶爬上3阶只能爬2个台阶，如果从1阶楼梯爬1阶后再爬1阶到3阶楼梯的话，这一方法会与从第2阶爬1个台阶上3阶中的1 阶 + 1 阶 + 1 阶重复，即从1阶楼梯爬1阶 + 1阶到3阶楼梯的时候会到达2阶楼梯，再爬1阶就已经属于2阶爬1阶到3阶楼梯中的方法了）</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>所以我们可以将规模为n的问题分解为n - 1和n - 2的问题，即dp[n] = dp[n - 1] + dp[n -2]</p>
-<blockquote>
-<p>（注：从n - 1阶楼多爬1个阶台阶上n阶相当于在爬上n - 1阶楼各个方法的后面+1阶上n阶，没有增加方法数，从n - 2阶楼多爬2个阶台阶上n阶相当于在爬上n - 2阶楼各个方法的后面+2阶上n阶，也没有增加方法数，如示例一般，所以关系式是dp[n] = dp[n - 1] + dp[n -2]，方法数相加）<br>
-那么我们就可以把规模为n的问题分解为规模为n - 1和n - 2的子问题</p>
-</blockquote>
-</blockquote>
-<ol start="2">
-<li>我们可以通过一维数组dp记录爬上各阶楼梯的方法数（子问题的计算结果），这样可以避免子问题的方法数重复计算。</li>
-</ol>
-<blockquote>
-<p>(注：比如dp[1] = 1(爬1阶楼梯有1种方法),dp[2] = 2(爬2阶楼梯有2种方法)，dp[3] = dp[1] + dp[2]，计算爬3阶楼梯的时候我们就不用再去计算爬1和2阶楼梯有多少种方法，dp[4] = dp[2] + dp[3],计算爬4阶楼梯的时候我们就不用再次去计算爬2和3阶楼梯有多少种方法，避免重复计算）</p>
-</blockquote>
-<ol start="3">
-<li>规模为n的问题最终为分解为dp[1]和dp[2]，无法在分解下去，前面我们就已经找到初始值了（dp[1] = 1，dp[2] = 2）<br>
-最终算法如下</li>
-</ol>
-<blockquote>
-<pre><code>public int climbStairs(int n) {
-    if(n &lt; 2){ //当楼梯只有1阶的时候（leetcode的题目第一步一般是处理特殊值）
-        return 1;
-    }
-    int[] ans = new int[n + 1];
-    ans[0] = 0;
-    ans[1] = 1; //爬1阶楼梯有1种方法
-    ans[2] = 2; //爬2阶楼梯有2种方法
-    for(int i = 3;i &lt; n + 1;i++){
-        ans[i] = ans[i - 1] + ans[i - 2]; //dp[n] = dp[n - 1] + dp[n -2]
-    }
-    return ans[n]; //爬n楼梯的方法数
-}
-</code></pre>
-</blockquote>
-<h2 id="练习">练习：</h2>
-<p><a href="https://leetcode-cn.com/problems/three-steps-problem-lcci/">leetcode#面试题 08.01. 三步问题</a><br>
-<a href="https://leetcode-cn.com/problems/min-cost-climbing-stairs/">leetcode#746. 使用最小花费爬楼梯</a></p>
-<h1 id="leetcode53-最大子序和"><a href="https://leetcode-cn.com/problems/maximum-subarray/">leetcode#53. 最大子序和</a></h1>
-<blockquote>
-<p>给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。<br>
-示例 1：<br>
-输入：nums = [-2,1,-3,4,-1,2,1,-5,4]<br>
-输出：6<br>
-解释：连续子数组 [4,-1,2,1] 的和最大，为 6 。</p>
-</blockquote>
-<ol>
-<li>将规模为n的数组尝试分解为多个子问题进行解决，我们先从小规模寻找规律<br>
-1.当数组规模为1的时候，很明显连续子数组最大和为nums[0]。<br>
-2.但数组规模为2的时候，连续子数组只有三种情况:（1）nums[0]（2）nums[1]（3）nums[0] + nums[1]，那么连续子数组最大和只可能是这三种情况中的最大值。</li>
-<li>那我们可以从数组最后一个元素下手，我们把数组分为两部分[【-2,1,-3,4,-1,2,1,-5】,4],那么连续子数组的最大和只有三种情况（1）连续子数组是【-2,1,-3,4,-1,2,1,-5】的一部分或全部，即子集（2）连续子数组是【-2,1,-3,4,-1,2,1,-5】的子集并上<code>4</code>(该子集必定包含【-2,1,-3,4,-1,2,1,-5】数组的最后一个元素<code>-5</code>，不然并上<code>4</code>就不连续了)（3）连续子数组只有<code>4</code>。对这三种情况进行比较即可求出连续最大和子集。</li>
-</ol>
-<blockquote>
-<p>拿数组规模为3（即[-2,1,-3]）来简单说明：我们从数组最后一个元素下手，把数组分为两部分[【-2,1】,-3],那么连续子数组的最大和只有三种情况（1）连续子数组是【-2,1】的子集，即[-2],[1],[-2,1]，（2）连续子数组是【-2,1】的子集并上<code>-3</code>，即[1,-3],[-2,1,-3]（3）连续子数组为[-3]。连续和最大子数组只有可能存在于这三种情况中。<br>
-第二种和第三种情况进行比较，其实是求问题规模为n，将包含末尾元素<code>4</code>的子集进行比较，要么是第二种情况（【-2,1,-3,4,-1,2,1,-5】的子集并上<code>4</code>）大，要么是第三种情况（<code>只有4</code>）大，然后再和第一种相比较。</p>
-</blockquote>
-<ol start="3">
-<li>对应上述的三种情况，我们只需比较【-2,1,-3,4,-1,2,1,-5】连续和最大的子集、包含<code>-5</code>元素连续和最大的子集再简单加上<code>4</code>、<code>4</code>这三者就能求出连续和最大的子集。<br>
-1.【-2,1,-3,4,-1,2,1,-5】连续和最大的子集不就相当于规模为n - 1的问题了么，仅仅只是去掉了<code>4</code>这一个元素。<br>
-2.包含<code>-5</code>元素连续和最大的子集再加上<code>4</code>相当于[【-2,1,-3,4,-1,2,1】,-5]连续和最大的子集并上<code>-5</code>（同样的，【-2,1,-3,4,-1,2,1】的连续和最大子集必定包含1，不然并上<code>-5</code>就不连续了。）或者只有<code>-5</code>。<br>
-3.这样我们就转而求【-2,1,-3,4,-1,2,1】，问题规模降为n - 2，这样套娃下去，直至问题规模为1，无法分解为止。</li>
-</ol>
-<p>综上所述，我们只须比较三个值，连续最大和子集max，包含末尾元素的连续最大和子集pre，末尾元素i，取其最大即可。<br>
-最终代码如下：</p>
-<blockquote>
-<pre><code>public int maxSubArray(int[] nums) {
-    int max = nums[0],pre = 0; //规模为1时，连续最大和子集max只能是nums[0]
-    for(int i : nums){ //这里从规模为1开始
-        pre = Math.max(pre + i,i); //包含末尾元素的连续最大和子集只有两种可能，要么第二种情况（前面子序列加上末尾元素），要么第三种情况（只有末尾元素）
-        max = Math.max(max,pre); //再与第一种情况相比较，求出nums[j]的连续最大和子集，进而求规模为j+1的问题
-    }
-    return max;
-}
-</code></pre>
-</blockquote>
-<h2 id="练习-2">练习：</h2>
-<p><a href="https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/">leetcode#剑指 Offer 42. 连续子数组的最大和（题目相同）</a><br>
-<a href="https://leetcode-cn.com/problems/contiguous-sequence-lcci/">leetcode#面试题 16.17. 连续数列（题目相同）</a><br>
-<a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/">leetcode#121. 买卖股票的最佳时机</a></p>
-<blockquote>
-<p>（先做题再看提示）同样的我们只要把最后一天和前面几天区分开，要么是最后一天卖股票，要么是在前面几天卖股票，要么就是0（一直亏损），如果是最后一天卖，只要找出前几天的最小值，最后一天减最小值，就是最后一天卖的最大收益，要么是前几天卖，那就将规模缩小为（n - 1），套娃到最后，就剩第一天了，最小值min就只能为第一天，到第二天最大化收益max只能是第一天减第一天，最小值只能是第一天或者第二天，到第三天，就是第三天减最小值的收益和第二天最大化收益max进行比较，求出最大值，就是到第三天的最大化收益max（避免重复计算最大收益），第三天股票价格和min（前两天的最小值）相比较（避免重复计算最小值），就可以求出到第三天股票的最低价格......套娃到第n天即可。</p>
-</blockquote>
-<p><a href="https://leetcode-cn.com/problems/range-sum-query-immutable/">leetcode#303. 区域和检索 - 数组不可变</a><br>
-<a href="https://leetcode-cn.com/problems/divisor-game/">leetcode#1025. 除数博弈</a><br>
-<a href="https://leetcode-cn.com/problems/the-masseuse-lcci/">leetcode#面试题 17.16. 按摩师</a></p>
-<p><a href="https://leetcode-cn.com/problems/is-subsequence/">leetcode#392. 判断子序列</a></p>
-<blockquote>
-<p>这样用到二维数组来记录，不好说明，见leetcode视频</p>
-</blockquote>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[入门依赖注入]]></title>
-        <id>https://inthowe.github.io/post/springDI2/</id>
-        <link href="https://inthowe.github.io/post/springDI2/">
-        </link>
-        <updated>2021-03-04T06:34:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>在 Spring 中，对象无需自己查找或创建与其所关联的其他对象，容器会负责把需要相互协作的对象引用赋予各个对象。创建应用对象之间协作关系的行为称为装配wiring，这也是依赖注入DI的本质。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>在 Spring 中，对象无需自己查找或创建与其所关联的其他对象，容器会负责把需要相互协作的对象引用赋予各个对象。创建应用对象之间协作关系的行为称为装配wiring，这也是依赖注入DI的本质。</p>
-<!-- more -->
-<p>Spring 容器负责创建应用程序中的 bean（简单看为一个具体对象） 并通过 DI 来协调这些对象之间的关系。我们只需告诉 Spring 要创建哪些 bean 并且如何将其装配在一起，有如下三种方式：</p>
-<ul>
-<li><a href="#%E9%9A%90%E5%BC%8F%E7%9A%84bean%E5%8F%91%E7%8E%B0%E6%9C%BA%E5%88%B6%E5%92%8C%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D">隐式的bean发现机制和自动装配</a></li>
-<li><a href="#%E5%9C%A8java%E4%B8%AD%E8%BF%9B%E8%A1%8C%E6%98%BE%E5%BC%8F%E9%85%8D%E7%BD%AE">在Java中进行显式配置</a></li>
-<li><a href="#%E5%9C%A8xml%E4%B8%AD%E8%BF%9B%E8%A1%8C%E6%98%BE%E5%BC%8F%E9%85%8D%E7%BD%AE">在XML中进行显式配置</a></li>
-</ul>
-<h1 id="隐式的bean发现机制和自动装配">隐式的bean发现机制和自动装配</h1>
-<p>隐式的bean发现机制通过组件扫描（component scanning）实现，Spring 会自动发现应用上下文中所创建的 bean。自动装配（autowiring）则是Spring 自动满足 bean 之间的依赖。</p>
-<p>沿用&quot;初识依赖注入&quot;中的例子,我们将拯救公主任务类修改如下</p>
-<blockquote>
-<pre><code>@Component
-public class RescueDamselQuest implements quest{
-    public void embark() {
-        System.out.println(&quot;拯救公主小分队&quot;);
-    }
-}
-</code></pre>
-<p>通过添加一个<code>@Component</code>注解将RescueDamselQuest类声明为组件类，Spring会通过组件扫描将其发现并为之创建Bean。</p>
-</blockquote>
-<p>将骑士类修改如下</p>
-<blockquote>
-<pre><code>public class BraveKnight implements knight{
-    @Autowired
-    private quest quest;
-    public void embarkOnQuest() {
-        quest.embark();
-    }
-}
-</code></pre>
-<p>通过<code>@Autowired</code>注解实现自动装配，Spring会将匹配依赖需求的bean装配进来，即将RescueDamselQuest类装配到quest中，从而无需通过构造器注入。</p>
-</blockquote>
-<p>如果我们现在需要骑士去执行其它任务，如打败恶龙的任务，则只须将RescueDamselQuest类上的<code>@Component</code>注解去除，在SlayDragonQuest类上加上<code>@Component</code>注解即可，而不需要改动BraveKnight的代码，这样我们无须通过硬编码的方式，而是通过配置的方式给骑士指派具体的任务。或者在所有的任务类上都加上<code>@Component</code>注解，进而Spring在给BraveKnight类自动注入quest时将会产生歧义，因为有三个bean符合要求。我们可以通过限定符<code>@Qualifier</code>来具体指定注入哪个bean，指派具体的任务，假设我们要注入屠龙任务，则</p>
-<blockquote>
-<pre><code>public class BraveKnight implements knight{
-    @Autowired
-    @Qualifier(&quot;SlayDragonQuest&quot;)
-    private quest quest;
-    public void embarkOnQuest() {
-        quest.embark();
-    }
-}
-</code></pre>
-</blockquote>
-<h1 id="在java中进行显式配置">在Java中进行显式配置</h1>
-<p>除了通过注解<code>@Component</code>隐式发现bean和<code>@Autowired</code>自动装配机制，我们还可以通过显式的Java配置给我们的骑士指派特定的任务。回到&quot;初始依赖注入&quot;中的骑士和任务的代码（即去除所有<code>@Component</code>和<code>@Autowired</code>注解），我们只需要添加一个&quot;KnightConfig&quot;配置来给我们的骑士指派具体的任务，如下</p>
-<blockquote>
-<pre><code>@Configuration
-public class KnightConfig {
-    @Bean
-    public Quest quest() {
-        return new SlayDragonQuest();
-    }
-    @Bean
-    public Knight knight(Quest quest) {
-        return new BraveKnight(quest);
-    }
-}
-</code></pre>
-</blockquote>
-<p>这样我们通过自动注入的方式就可以给我们的骑士指派打败恶龙的任务，指派其它任务则只须需改配置，将<code>return new SlayDragonQuest();</code>修改为<code>return new RescueDamselQuest();</code>,这样就改为给骑士指派拯救公主的任务。</p>
-<h1 id="在xml中进行显式配置">在XML中进行显式配置</h1>
-<p>我不喜欢XML，略。基本采用第一种方式，代码相对较简约，其次bean的配置在实际应用过程中其实很少会发生变动，也很少出现注入的bean会发生冲突。</p>
-<p>通过两种上面两种方式配置完骑士类，就可以通过自动装配创建骑士类对象</p>
-<blockquote>
-<pre><code>public class test {
-    @Autowired
-    private static BraveKnight braveKnight；
-    public static void main(String[] args) {
-        braveKnight.embarkOnQuest();
-    }
-}
-</code></pre>
-</blockquote>
-<h1 id="依赖注入实现控制反转">依赖注入实现控制反转</h1>
-<p>将类与类之间的依赖和控制剥离出来，交给第三方Spring去做，将控制权反转给Spring。由Spring来控制依赖，通过构造函数或属性等注入进去（将任务类注入骑士类）。如果没有将控制反转给Spring，假设我们要创建一个拯救公主的骑士，那么我们得创建拯救公主的任务类（new RescueDamselQuest()），然后创建骑士类（new BraveKnight()）,把我们的拯救公主任务注入我们的骑士类中去，对于这样相对简单的依赖，似乎这样做也没有什么问题，但如果依赖关系变得复杂，A依赖B，B依赖C，C依赖D，D依赖E，那我们就得先创建E，在创建D，把E注入D，然后创建C，把D注入C中，再创建B，把C注入B中，最后再创建A，把B注入A中，这一个过程中我们为了使用一个A，创建了5个对象，要是多个地方使用到了A，那我们就得创建出5倍的对象出来，同时这些类一旦出现修改，我们就得修改多个地方。而将控制反转给Spring，我们只需要在配置中指明这些类的依赖关系，最后创建A对象时，只需要添加一个自动注入的注解，Spring就会为我们自动装配好。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[初识依赖注入]]></title>
-        <id>https://inthowe.github.io/post/springDI1/</id>
-        <link href="https://inthowe.github.io/post/springDI1/">
-        </link>
-        <updated>2021-03-03T10:40:17.000Z</updated>
-        <summary type="html"><![CDATA[<p>通过依赖注入DI，对象的依赖关系将由系统中负责协调各对象的第三方组件在创建对象的时候进行设定，对象无需自行创建或管理它们的依赖关系。实现代码解耦及易于理解和测试。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>通过依赖注入DI，对象的依赖关系将由系统中负责协调各对象的第三方组件在创建对象的时候进行设定，对象无需自行创建或管理它们的依赖关系。实现代码解耦及易于理解和测试。</p>
-<!-- more -->
-<h2 id="举个列子">举个列子</h2>
-<p>骑士执行拯救公主，打败恶龙，圆桌滚动等任务，下面创建对应的类</p>
-<ul>
-<li>任务接口Quest</li>
-</ul>
-<blockquote>
-<pre><code>public interface Quest { 
-    void embark(); 
-}
-</code></pre>
-</blockquote>
-<ul>
-<li>
-<p>Quest接口的三个实现类</p>
-<ul>
-<li>拯救公主任务</li>
-</ul>
-<blockquote>
-<pre><code>public class RescueDamselQuest implements Quest{
-    public void embark() {
-        System.out.println(&quot;拯救公主小分队&quot;);
-    }
-}
-</code></pre>
-</blockquote>
-<ul>
-<li>屠龙任务</li>
-</ul>
-<blockquote>
-<pre><code>public class SlayDragonQuest implements Quest{
-    public void embark() {
-        System.out.println(&quot;屠龙勇士&quot;);
-    }
-}
-</code></pre>
-</blockquote>
-<ul>
-<li>圆桌任务</li>
-</ul>
-<blockquote>
-<pre><code>public class MakeRoundTableRounderQuest implements Quest{
-    public void embark() {
-        System.out.println(&quot;我干了，你们随意&quot;);
-    }
-}
-</code></pre>
-</blockquote>
-</li>
-<li>
-<p>骑士接口</p>
-</li>
-</ul>
-<blockquote>
-<pre><code>public interface knight {
-    void embarkOnQuest(); //执行任务
-}
-</code></pre>
-</blockquote>
-<p>现在骑士需要执行拯救公主的任务，如下实现了一个类</p>
-<blockquote>
-<pre><code>public class BraveKnight  implements knight{
-    private RescueDamselQuest quest;
-    public BraveKnight () {
-        this.quest = new RescueDamselQuest(); //接受任务
-    }
-    public void embarkOnQuest() {
-        quest.embark(); //执行任务
-    }
-}
-</code></pre>
-</blockquote>
-<p>BraveKnight在它的构造函数中自行创建了RescueDamselQuest（new RescueDamselQuest()），这使得BraveKnight紧密地和 RescueDamselQuest耦合到了一起，因此如果让骑士执行其他任务如屠龙任务，那么BraveKnight将无法执行。</p>
-<blockquote>
-<p><strong>耦合是因为BraveKnight这个类去负责管理RescueDamselQuest或SlayDragonQuest等任务类（它所相互协作、依赖的类）的引用（自行创建依赖类）</strong><br>
-骑士类仅仅只是需要接受一个任务，但具体是拯救公主任务，打败恶龙，圆桌滚动还是其它实现任务接口的其它类，并不重要。具体的骑士对象接受的是哪个具体任务，应该交由配置来实现，即注入的那个具体任务。</p>
-</blockquote>
-<h2 id="依赖注入方式之-构造器参数传入">依赖注入方式之--构造器参数传入</h2>
-<blockquote>
-<pre><code>public class BraveKnight implements knight{
-    private Quest quest;
-    public BraveKnight(Quest quest) {
-        this.quest = quest;
-    }
-    public void embarkOnQuest() {
-        quest.embark();
-    }
-}
-</code></pre>
-</blockquote>
-<p>如上可以看到，BraveKnight 没有自行创建探险任务（new一个任务对象），没有与任何特定的 Quest 实现发生耦合，实现松耦合，所以BraveKnight 类能够响应 RescueDamselQuest、SlayDragonQuest、MakeRoundTableRounderQuest 等任意的Quest 接口的实现类，从而执行各种任务。</p>
-<blockquote>
-<pre><code>public class test {
-    private static BraveKnight braveKnight = new BraveKnight(new RescueDamselQuest());
-    public static void main(String[] args) {
-        braveKnight.embarkOnQuest();
-    }
-}
-</code></pre>
-</blockquote>
-<blockquote>
-<p><strong>通过依赖注入DI能够实现解耦，对象的依赖关系将由系统中负责协调各对象的第三方组件在创建对象的时候进行设定，对象无需自行创建或管理它们的依赖关系。</strong></p>
-</blockquote>
-]]></content>
-    </entry>
-</feed>
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://inthowe.github.io/tag/GraphTheory/" class="tag">
+                    图论
+                  </a>
+                
+                  <a href="https://inthowe.github.io/tag/GTWA/" class="tag">
+                    GTWA
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://inthowe.github.io/post/backtracking1/">
+                  <h3 class="post-title">
+                    初识回溯算法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '94ec1fd51176ba3adda3',
+        clientSecret: '961116715b7a89cb10a934782a30798bcef32d89',
+        repo: 'inthowe.github.io',
+        owner: 'IntHowe',
+        admin: ['IntHowe'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

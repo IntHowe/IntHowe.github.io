@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>友链 | 你看见我小熊么</title>
+<title>图论 | 你看见我小熊么</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -12,21 +12,13 @@
 <link rel="stylesheet" href="https://inthowe.github.io/styles/main.css">
 
 
-  
-    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
-  
-
-  
-
 
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 
 
-    <meta name="description" content="👨‍💻C++大佬
-" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="简单题重拳出击，中等题唯唯诺诺，困难题提桶跑路">
   </head>
   <body>
     <div id="app" class="main">
@@ -102,26 +94,28 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">友链</h2>
-            <div class="post-date">2021-03-11</div>
-            
-            <div class="post-content" v-pre>
-              <h1 id="c大佬"><a href="https://blog.csdn.net/Jonh_">👨‍💻C++大佬</a></h1>
-
-            </div>
-            
-            
-
-            
+          <h2 class="current-tag">标签: 图论</h2>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://inthowe.github.io/post/GraphsAndSubgraphs/">
+                  <h2 class="post-title">一、图与子图</h2>
+                </a>
+                <div class="post-date">
+                  2021-06-28
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
               
-                <div id="gitalk-container" data-aos="fade-in"></div>
-              
+            </article>
+          
 
-              
-            
-
-          </div>
+          <div class="pagination-container">
+  
+  
+</div>
 
         </div>
       </div>
@@ -147,29 +141,6 @@ var app = new Vue({
     hljs.initHighlightingOnLoad()
   </script>
 
-
-
-
-  
-    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-    <script>
-
-      var gitalk = new Gitalk({
-        clientID: '94ec1fd51176ba3adda3',
-        clientSecret: '961116715b7a89cb10a934782a30798bcef32d89',
-        repo: 'inthowe.github.io',
-        owner: 'IntHowe',
-        admin: ['IntHowe'],
-        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-        distractionFreeMode: false  // Facebook-like distraction free mode
-      })
-
-      gitalk.render('gitalk-container')
-
-    </script>
-  
-
-  
 
 
 
