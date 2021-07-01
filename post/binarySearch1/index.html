@@ -1,26 +1,13 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
-
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>初识二分查找 | 你看见我小熊么</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://inthowe.github.io/favicon.ico?v=1625060370944">
+<link rel="shortcut icon" href="https://inthowe.github.io/favicon.ico?v=1625121059539">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://inthowe.github.io/styles/main.css">
-
-
-  
-    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
-  
-
-  
-
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<link rel="alternate" type="application/atom+xml" title="初识二分查找 | 你看见我小熊么 - Atom Feed" href="https://inthowe.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
@@ -29,87 +16,96 @@
 二分查找一般写法
 public int lower_bound(int[] num..." />
     <meta name="keywords" content="二分查找,算法" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
-    <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://inthowe.github.io">
-        <img src="https://inthowe.github.io/images/avatar.png?v=1625060370944" class="site-logo">
-        <h1 class="site-title">你看见我小熊么</h1>
-      </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
-    </div>
-    <div>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://inthowe.github.io">
+  <img class="avatar" src="https://inthowe.github.io/images/avatar.png?v=1625121059539" alt="">
+  </a>
+  <h1 class="site-title">
+    你看见我小熊么
+  </h1>
+  <p class="site-description">
+    简单题重拳出击，中等题唯唯诺诺，困难题提桶跑路
+  </p>
+  <div class="menu-container">
+    
       
-        
-          <a href="/" class="site-nav">
-            首页
-          </a>
-        
+        <a href="/" class="menu">
+          首页
+        </a>
       
-        
-          <a href="/archives" class="site-nav">
-            归档
-          </a>
-        
+    
       
-        
-          <a href="/tags" class="site-nav">
-            标签
-          </a>
-        
+        <a href="/archives" class="menu">
+          归档
+        </a>
       
-        
-          <a href="/post/about" class="site-nav">
-            关于
-          </a>
-        
+    
       
-        
-          <a href="https://inthowe.github.io/post/Link" class="site-nav">
-            友链
-          </a>
-        
+        <a href="/tags" class="menu">
+          标签
+        </a>
       
-    </div>
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="https://inthowe.github.io/post/Link" class="menu">
+          友链
+        </a>
+      
+    
   </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
+  <div class="social-container">
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
-      
-    </div>
-    <div class="site-description">
-      简单题重拳出击，中等题唯唯诺诺，困难题提桶跑路
-    </div>
-    <div class="site-footer">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://inthowe.github.io/atom.xml" target="_blank">RSS</a>
-    </div>
+    
   </div>
 </div>
 
-
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">初识二分查找</h2>
-            <div class="post-date">2021-04-06</div>
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              初识二分查找
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-04-06
+              </span>
+              <span>
+                4 min read
+              </span>
+              
+                <a href="https://inthowe.github.io/tag/BinarySearch/" class="post-tag">
+                  # 二分查找
+                </a>
+              
+                <a href="https://inthowe.github.io/tag/Algorithm/" class="post-tag">
+                  # 算法
+                </a>
+              
+            </div>
             
-            <div class="post-content" v-pre>
-              <p>二分查找要求数据结构必须先排好序，具有有随机访问的特点（例如数组），能够根据中间元素的特点推测它两侧元素的性质，可以在数据规模的对数时间复杂度内完成查找。</p>
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>二分查找要求数据结构必须先排好序，具有有随机访问的特点（例如数组），能够根据中间元素的特点推测它两侧元素的性质，可以在数据规模的对数时间复杂度内完成查找。</p>
 <!-- more -->
 <p>二分查找一般写法</p>
 <pre><code>public int lower_bound(int[] nums,int first,int last,int value) {
@@ -170,91 +166,129 @@ public int lower_bound(int[] num..." />
 <h2 id="面试题-0803-魔术索引"><a href="https://leetcode-cn.com/problems/magic-index-lcci/">面试题 #08.03. 魔术索引</a></h2>
 <p>二分查找在最差的情况与遍历无异。。。</p>
 
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#leetcode-704-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE">leetcode #704. 二分查找</a></li>
+<li><a href="#%E5%89%91%E6%8C%87-offer-53-i-%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E6%95%B0%E5%AD%97-i">剑指 Offer #53 - I. 在排序数组中查找数字 I</a></li>
+<li><a href="#leetcode-374-%E7%8C%9C%E6%95%B0%E5%AD%97%E5%A4%A7%E5%B0%8F">leetcode #374. 猜数字大小</a></li>
+<li><a href="#leetcode-35-%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE">leetcode #35. 搜索插入位置</a></li>
+<li><a href="#leetcode-744-%E5%AF%BB%E6%89%BE%E6%AF%94%E7%9B%AE%E6%A0%87%E5%AD%97%E6%AF%8D%E5%A4%A7%E7%9A%84%E6%9C%80%E5%B0%8F%E5%AD%97%E6%AF%8D">leetcode #744. 寻找比目标字母大的最小字母</a></li>
+<li><a href="#%E5%89%91%E6%8C%87-offer-53-ii-0~n-1%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97">剑指 Offer #53 - II. 0～n-1中缺失的数字</a></li>
+<li><a href="#leetcode-367-%E6%9C%89%E6%95%88%E7%9A%84%E5%AE%8C%E5%85%A8%E5%B9%B3%E6%96%B9%E6%95%B0">leetcode #367. 有效的完全平方数</a></li>
+<li><a href="#leetcode-278-%E7%AC%AC%E4%B8%80%E4%B8%AA%E9%94%99%E8%AF%AF%E7%9A%84%E7%89%88%E6%9C%AC">leetcode #278. 第一个错误的版本</a></li>
+<li><a href="#leetcode-441-%E6%8E%92%E5%88%97%E7%A1%AC%E5%B8%81">leetcode #441. 排列硬币</a></li>
+<li><a href="#leetcode-69-x-%E7%9A%84%E5%B9%B3%E6%96%B9%E6%A0%B9">leetcode #69. x 的平方根</a></li>
+<li><a href="#%E5%89%91%E6%8C%87-offer-53-ii-0~n-1%E4%B8%AD%E7%BC%BA%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97-2">剑指 Offer #53 - II. 0～n-1中缺失的数字</a></li>
+<li><a href="#%E9%9D%A2%E8%AF%95%E9%A2%98-1005-%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84%E6%90%9C%E7%B4%A2">面试题 #10.05. 稀疏数组搜索</a></li>
+<li><a href="#leetcode-350-%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86-ii">leetcode #350. 两个数组的交集 II</a></li>
+<li><a href="#%E5%89%91%E6%8C%87-offer-11-%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97">剑指 Offer #11. 旋转数组的最小数字</a></li>
+<li><a href="#leetcode-167-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C-ii-%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84">leetcode #167. 两数之和 II - 输入有序数组</a></li>
+<li><a href="#leetcode-1337-%E7%9F%A9%E9%98%B5%E4%B8%AD%E6%88%98%E6%96%97%E5%8A%9B%E6%9C%80%E5%BC%B1%E7%9A%84-k-%E8%A1%8C">leetcode #1337. 矩阵中战斗力最弱的 K 行</a></li>
+<li><a href="#leetcode-852-%E5%B1%B1%E8%84%89%E6%95%B0%E7%BB%84%E7%9A%84%E5%B3%B0%E9%A1%B6%E7%B4%A2%E5%BC%95">leetcode #852. 山脉数组的峰顶索引</a></li>
+<li><a href="#leetcode-1351-%E7%BB%9F%E8%AE%A1%E6%9C%89%E5%BA%8F%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%9A%84%E8%B4%9F%E6%95%B0">leetcode #1351. 统计有序矩阵中的负数</a></li>
+<li><a href="#leetcode-349-%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86">leetcode #349. 两个数组的交集</a></li>
+<li><a href="#leetcode-392%E5%88%A4%E6%96%AD%E5%AD%90%E5%BA%8F%E5%88%97">leetcode #392.判断子序列</a></li>
+<li><a href="#%E9%9D%A2%E8%AF%95%E9%A2%98-0803-%E9%AD%94%E6%9C%AF%E7%B4%A2%E5%BC%95">面试题 #08.03. 魔术索引</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
             </div>
-            
-              <div class="tag-container">
-                
-                  <a href="https://inthowe.github.io/tag/BinarySearch/" class="tag">
-                    二分查找
-                  </a>
-                
-                  <a href="https://inthowe.github.io/tag/Algorithm/" class="tag">
-                    算法
-                  </a>
-                
-              </div>
-            
-            
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="https://inthowe.github.io/post/divideAndConquer1/">
-                  <h3 class="post-title">
-                    初识分治算法
-                  </h3>
-                </a>
-              </div>
-            
-
-            
-              
-                <div id="gitalk-container" data-aos="fade-in"></div>
-              
-
-              
-            
-
-          </div>
-
+          </article>
         </div>
-      </div>
-    </div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script type="application/javascript">
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://inthowe.github.io/post/divideAndConquer1/">
+              <h3 class="post-title">
+                初识分治算法
+              </h3>
+            </a>
+          </div>
+        
 
-AOS.init();
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '94ec1fd51176ba3adda3',
+    clientSecret: '961116715b7a89cb10a934782a30798bcef32d89',
+    repo: 'inthowe.github.io',
+    owner: 'IntHowe',
+    admin: ['IntHowe'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
 
 </script>
 
+          
 
-  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>
-    hljs.initHighlightingOnLoad()
-  </script>
+          
+        
 
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://inthowe.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
 
+      </div>
+    </div>
 
-
-  
-    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
     <script>
+      hljs.initHighlightingOnLoad()
 
-      var gitalk = new Gitalk({
-        clientID: '94ec1fd51176ba3adda3',
-        clientSecret: '961116715b7a89cb10a934782a30798bcef32d89',
-        repo: 'inthowe.github.io',
-        owner: 'IntHowe',
-        admin: ['IntHowe'],
-        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-        distractionFreeMode: false  // Facebook-like distraction free mode
-      })
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
 
-      gitalk.render('gitalk-container')
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
 
     </script>
-  
-
-  
-
-
-
-
   </body>
 </html>

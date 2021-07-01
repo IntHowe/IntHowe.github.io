@@ -1,150 +1,112 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
-
-<title>标签列表 | 你看见我小熊么</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://inthowe.github.io/favicon.ico?v=1625060370944">
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>你看见我小熊么</title>
+<link rel="shortcut icon" href="https://inthowe.github.io/favicon.ico?v=1625121059539">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://inthowe.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="你看见我小熊么 - Atom Feed" href="https://inthowe.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-
-
-    <meta name="description" content="简单题重拳出击，中等题唯唯诺诺，困难题提桶跑路">
+  <meta name="description" content="简单题重拳出击，中等题唯唯诺诺，困难题提桶跑路" />
   </head>
   <body>
-    <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://inthowe.github.io">
-        <img src="https://inthowe.github.io/images/avatar.png?v=1625060370944" class="site-logo">
-        <h1 class="site-title">你看见我小熊么</h1>
-      </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
-    </div>
-    <div>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://inthowe.github.io">
+  <img class="avatar" src="https://inthowe.github.io/images/avatar.png?v=1625121059539" alt="">
+  </a>
+  <h1 class="site-title">
+    你看见我小熊么
+  </h1>
+  <p class="site-description">
+    简单题重拳出击，中等题唯唯诺诺，困难题提桶跑路
+  </p>
+  <div class="menu-container">
+    
       
-        
-          <a href="/" class="site-nav">
-            首页
-          </a>
-        
+        <a href="/" class="menu">
+          首页
+        </a>
       
-        
-          <a href="/archives" class="site-nav">
-            归档
-          </a>
-        
+    
       
-        
-          <a href="/tags" class="site-nav">
-            标签
-          </a>
-        
+        <a href="/archives" class="menu">
+          归档
+        </a>
       
-        
-          <a href="/post/about" class="site-nav">
-            关于
-          </a>
-        
+    
       
-        
-          <a href="https://inthowe.github.io/post/Link" class="site-nav">
-            友链
-          </a>
-        
+        <a href="/tags" class="menu">
+          标签
+        </a>
       
-    </div>
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="https://inthowe.github.io/post/Link" class="menu">
+          友链
+        </a>
+      
+    
   </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
+  <div class="social-container">
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
-      
-    </div>
-    <div class="site-description">
-      简单题重拳出击，中等题唯唯诺诺，困难题提桶跑路
-    </div>
-    <div class="site-footer">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://inthowe.github.io/atom.xml" target="_blank">RSS</a>
-    </div>
+    
   </div>
 </div>
 
 
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <h2 class="tag-list-title">标签列表</h2>
-          <div class="tags-container">
-            
-              <a class="tag" href="https://inthowe.github.io/tag/GraphTheory/">图论</a>
-            
-              <a class="tag" href="https://inthowe.github.io/tag/GTWA/">GTWA</a>
-            
-              <a class="tag" href="https://inthowe.github.io/tag/Backtracking/">回溯算法</a>
-            
-              <a class="tag" href="https://inthowe.github.io/tag/Algorithm/">算法</a>
-            
-              <a class="tag" href="https://inthowe.github.io/tag/BinarySearch/">二分查找</a>
-            
-              <a class="tag" href="https://inthowe.github.io/tag/DivideAndConquer/">分治算法</a>
-            
-              <a class="tag" href="https://inthowe.github.io/tag/Greedy/">贪心算法</a>
-            
-              <a class="tag" href="https://inthowe.github.io/tag/DP/">动态规划</a>
-            
-              <a class="tag" href="https://inthowe.github.io/tag/DI/">依赖注入</a>
-            
-              <a class="tag" href="https://inthowe.github.io/tag/Spring/">Spring</a>
-            
-          </div>
+        <div class="tags-container">
+          
+            <a class="tag" href="https://inthowe.github.io/tag/GraphTheory/">图论</a>
+          
+            <a class="tag" href="https://inthowe.github.io/tag/GTWA/">GTWA</a>
+          
+            <a class="tag" href="https://inthowe.github.io/tag/Backtracking/">回溯算法</a>
+          
+            <a class="tag" href="https://inthowe.github.io/tag/Algorithm/">算法</a>
+          
+            <a class="tag" href="https://inthowe.github.io/tag/BinarySearch/">二分查找</a>
+          
+            <a class="tag" href="https://inthowe.github.io/tag/DivideAndConquer/">分治算法</a>
+          
+            <a class="tag" href="https://inthowe.github.io/tag/Greedy/">贪心算法</a>
+          
+            <a class="tag" href="https://inthowe.github.io/tag/DP/">动态规划</a>
+          
+            <a class="tag" href="https://inthowe.github.io/tag/DI/">依赖注入</a>
+          
+            <a class="tag" href="https://inthowe.github.io/tag/Spring/">Spring</a>
+          
         </div>
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://inthowe.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
       </div>
     </div>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script type="application/javascript">
-
-AOS.init();
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
-
-</script>
-
-
-  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>
-    hljs.initHighlightingOnLoad()
-  </script>
-
-
-
-
-
   </body>
 </html>
