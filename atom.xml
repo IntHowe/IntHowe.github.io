@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://inthowe.github.io</id>
     <title>你看见我小熊么</title>
-    <updated>2021-07-03T09:41:59.363Z</updated>
+    <updated>2021-07-03T10:00:31.961Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://inthowe.github.io"/>
     <link rel="self" href="https://inthowe.github.io/atom.xml"/>
@@ -268,7 +268,7 @@ def backtrack(路径, 选择列表):
 <h2 id="面试题-1005-稀疏数组搜索"><a href="https://leetcode-cn.com/problems/sparse-array-search-lcci/">面试题 #10.05. 稀疏数组搜索</a></h2>
 <p>如果mid为空字符串时，用双指针向前向后查找非空字符串，找到后与查找的字符串进行比较，判断查找的字符串位于哪个区间</p>
 <h2 id="leetcode-350-两个数组的交集-ii"><a href="https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/">leetcode #350. 两个数组的交集 II</a></h2>
-<p>这道题居然会有二分的标签。。。。第一个数组用hash表储存元素及个数，遍历第二个数组，依次在hash表中查找是否有相同的元素，存在则加入结果集，并将对应的个数减一，为0则移除。</p>
+<p>第一个数组用hash表储存元素及个数，遍历第二个数组，依次在hash表中查找是否有相同的元素，存在则加入结果集，并将对应的个数减一，为0则移除。</p>
 <h2 id="剑指-offer-11-旋转数组的最小数字"><a href="https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/">剑指 Offer #11. 旋转数组的最小数字</a></h2>
 <p>二分后中点值与右端值进行比较，中点值&gt;右端值则left = mid；中点值&lt;右端值则right = mid；中点值=右端值则right--（此时无法判断中点是在最小值的左侧还是右侧）；</p>
 <h2 id="leetcode-167-两数之和-ii-输入有序数组"><a href="https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/">leetcode #167. 两数之和 II - 输入有序数组</a></h2>
@@ -281,11 +281,11 @@ def backtrack(路径, 选择列表):
 <p>行和列都有序，对行头进行一次二分查找，找出首个行头为负的行，该行头后续的数字皆为负数，<br>
 再对第一行至改行的每一行进行一次二分查找，统计负数个数。</p>
 <h2 id="leetcode-349-两个数组的交集"><a href="https://leetcode-cn.com/problems/intersection-of-two-arrays/">leetcode #349. 两个数组的交集</a></h2>
-<p>这道题居然会有二分的标签。。。。第一个数组用hashset储存元素，遍历第二个数组，依次在hashset中查找是否有相同的元素，存在则加入结果集。</p>
+<p>第一个数组用hashset储存元素，遍历第二个数组，依次在hashset中查找是否有相同的元素，存在则加入结果集。</p>
 <h2 id="leetcode-392判断子序列"><a href="https://leetcode-cn.com/problems/is-subsequence/">leetcode #392.判断子序列</a></h2>
-<p>这道题居然会有二分的标签。。。。动态规划这是</p>
+<p>动态规划</p>
 <h2 id="面试题-0803-魔术索引"><a href="https://leetcode-cn.com/problems/magic-index-lcci/">面试题 #08.03. 魔术索引</a></h2>
-<p>二分查找在最差的情况与遍历无异。。。</p>
+<p>二分查找在最差的情况与遍历无异</p>
 ]]></content>
     </entry>
     <entry>
