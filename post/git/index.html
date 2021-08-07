@@ -1,0 +1,359 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Git | 你看见我小熊么</title>
+<link rel="shortcut icon" href="https://inthowe.github.io/favicon.ico?v=1628332394380">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://inthowe.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Git | 你看见我小熊么 - Atom Feed" href="https://inthowe.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="Git基础操作
+
+1 创建版本库
+
+git init
+在需要创建版本库的文件夹下执行“git init”命令即可，git会在当前目录下创建“.git”目录来跟踪管理版本库，并且创建一个&quot;master&quot;分支
+
+把一个文件放..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://inthowe.github.io">
+  <img class="avatar" src="https://inthowe.github.io/images/avatar.png?v=1628332394380" alt="">
+  </a>
+  <h1 class="site-title">
+    你看见我小熊么
+  </h1>
+  <p class="site-description">
+    
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/Link" class="menu">
+          友链
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Git
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-08-02
+              </span>
+              <span>
+                7 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>Git基础操作</p>
+<!-- more -->
+<h1 id="1-创建版本库">1 创建版本库</h1>
+<blockquote>
+<p>git init<br>
+在需要创建版本库的文件夹下执行“git init”命令即可，git会在当前目录下创建“.git”目录来跟踪管理版本库，并且创建一个&quot;master&quot;分支</p>
+</blockquote>
+<h2 id="把一个文件放到git仓库只需要两步">把一个文件放到Git仓库只需要两步</h2>
+<blockquote>
+<p>git add [<file>]<br>
+将指定文件添加至版本库中的暂存区。</p>
+</blockquote>
+<blockquote>
+<p>git commit [-m &quot;提交说明&quot;]<br>
+将暂存区所有内容提交至当前分支,&quot;commit&quot;命令可以一次提交很多文件，可以多次使用&quot;add&quot;命令多次添加文件，一次提交。</p>
+</blockquote>
+<h1 id="2-仓库管理">2 仓库管理</h1>
+<blockquote>
+<p>git status<br>
+查看仓库当前状态。</p>
+</blockquote>
+<blockquote>
+<p>git diff<br>
+查看仓库具体修改内容。</p>
+</blockquote>
+<blockquote>
+<p>git log [--graph] [--pretty = oneline] [--abbrev-commit]<br>
+查看提交日志，输出版本号(commit_id)等，参数&quot;--graph&quot;可以看到分支合并图，参数&quot;--pretty = oneline&quot;可以简化输出信息，参数&quot;--abbrev-commit&quot;可以缩略提交检验码。</p>
+</blockquote>
+<blockquote>
+<p>git reset [--hard] &lt;HEAD^&gt;<br>
+将版本回退至上一个版本，git中用&quot;HEAD&quot;表示当前版本，上一版本用&quot;HEAD<sup>&quot;表示，上上个版本用&quot;HEAD</sup>^&quot;表示，也可用如&quot;HEAD~100&quot;回到上100个版本，也可用&quot;git reset --hard commit_id&quot;回退至指定版本，版本号可不写全。</p>
+</blockquote>
+<blockquote>
+<p>git reflog<br>
+可查看每次执行的命令。</p>
+</blockquote>
+<blockquote>
+<p>git checkout -- <file><br>
+撤销file文件在工作区的全部修改，回到和暂存区一致的状态。</p>
+</blockquote>
+<blockquote>
+<p>git reset HEAD <file><br>
+除了回退版本外，也可以把暂存区的修改回退到工作区，使用HEAD表示最新版本。</p>
+</blockquote>
+<blockquote>
+<p>git rm <file><br>
+从版本库中删除该文件。</p>
+</blockquote>
+<h1 id="3-远程仓库">3 远程仓库</h1>
+<h2 id="配置github仓库">配置GitHub仓库</h2>
+<ol>
+<li>创建SSH Key<br>
+在用户主目录下，查看是否有&quot;.ssh&quot;目录，若有，查看是否有&quot;id_rsa&quot;和&quot;id_rsa.pub&quot;这两个文件，若有，则已经配置过。否则，打开Git Bash，创建SSH Key：</li>
+</ol>
+<blockquote>
+<p>$ ssh-keygen -t rsa -C &quot;youremail@example.com&quot;<br>
+一路回车，使用默认值即可。成功后会创建&quot;.ssh&quot;目录和&quot;id_rsa&quot;（私钥）、&quot;id_rsa.pub&quot;（公钥）这两个文件。</p>
+</blockquote>
+<ol start="2">
+<li>添加公钥<br>
+登录Git Hub，打开&quot;Account settings&quot;,&quot;SSH Keys&quot;页面，点&quot;Add SSH Key&quot;，填上Title，在Key文本框中粘贴&quot;id_rsa.pub&quot;文件内容，点&quot;Add Key&quot;。</li>
+</ol>
+<p>##关联远程仓库<br>
+从零开发最好是先创建远程库，然后从远程库克隆。</p>
+<ol>
+<li>登录GitHub，创建仓库</li>
+<li>克隆一个本地库</li>
+</ol>
+<blockquote>
+<p>git clone &lt;仓库地址&gt;</p>
+</blockquote>
+<p>先有本地仓库，后有远程仓库的关联方法</p>
+<ol>
+<li>登录GitHub，创建仓库</li>
+<li>关联一个远程仓库</li>
+</ol>
+<blockquote>
+<p>git remote add origin &lt;仓库地址&gt;<br>
+&quot;origin&quot;是远程仓库默认名字</p>
+</blockquote>
+<ol start="3">
+<li>推送更新</li>
+</ol>
+<blockquote>
+<p>git push [-u] origin [分支名] [tagname] [--tags] [:refs/tags/<tagname>]<br>
+将指定的分支推送到远程仓库对应的分支，第一次推送加上&quot;-u&quot;参数可以把本地指定的分支和远程仓库对应的分支关联起来，以后推送可以省略该参数。参数&quot;[tagname]&quot;表示推送指定标签至远程服务器。参数&quot;[--tags]&quot;表示将所有标签信息推送到远程仓库。参数&quot;[:refs/tags/<tagname>]&quot;表示删除远程标签。</p>
+</blockquote>
+<blockquote>
+<p>git remote [-v]<br>
+查看远程库信息。参数&quot;-v&quot;表示显示更详细的信息，如果没有推送权限，就看不到push的地址。</p>
+</blockquote>
+<blockquote>
+<p>git remote rm <name><br>
+解除本地库和远程库的绑定关系，删除远程库仍需登录GitHub进行删除</p>
+</blockquote>
+<h1 id="4-分支管理">4 分支管理</h1>
+<blockquote>
+<p>git checkout [-b] &lt;分支名&gt;<br>
+切换至已有分支。&quot;-b&quot;参数表示创建并切换到新分支，相当于两个命令&quot;git branch &lt;分支名&gt;&quot;和&quot;git checkout &lt;分支名&gt;&quot;</p>
+</blockquote>
+<blockquote>
+<p>git branch [-d] [-D] [&lt;分支名&gt;] [--set-upstream-to=origin/&lt;远程分支&gt; &lt;本地分支&gt;]<br>
+查看所有分支，并在当前分支前面标一个&quot;*&quot;号。如果有参数&quot;&lt;分支名&gt;&quot;,则表示创建该分支。<br>
+如果有参数&quot;-d&quot;和&quot;&lt;分支名&gt;&quot;，则表示删除该分支。如果有参数&quot;-D&quot;和&quot;&lt;分支名&gt;&quot;，则表示强制删除该分支，在该分支没有被合并时使用。参数&quot;[--set-upstream-to=origin/&lt;远程分支&gt; &lt;本地分支&gt;]&quot;表示将本地指定的分支与远程指定的分支进行关联。</p>
+</blockquote>
+<blockquote>
+<p>git merge [--no-ff -m &quot;提交说明&quot;] &lt;分支名&gt;<br>
+将指定的分支合并到当前分支。如果有冲突，git会通过&quot;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&quot;,&quot;=======&quot;,&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&quot;标记出冲突中不同分支的内容，通过命令&quot;git status&quot;可以查看冲突，并手动解决冲突后再提交。<br>
+git默认使用&quot;Fast forward&quot;模式，在该模式下删除分支后会丢掉分支信息，就看不出曾经做过合并。通过参数&quot;[--no-ff -m &quot;提交说明&quot;]&quot;会使用普通模式合并，创建新的commit，所以需要添加新的提交说明。</p>
+</blockquote>
+<blockquote>
+<p>git switch [-c] &lt;分支名&gt;<br>
+切换至已有分支。&quot;-c&quot;参数表示创建并切换到新分支。</p>
+</blockquote>
+<blockquote>
+<p>git stash [list] [apply [&lt;指定的现场&gt;]] [drop] [pop]<br>
+储藏工作现场，在需要切换分支但是在当前分支并不想提交时使用。参数&quot;[list]&quot;表示列出现场列表。<br>
+参数&quot;[apply [&lt;指定的现场&gt;]] &quot;表示恢复现场但是不删除stash内容。参数&quot;[drop]&quot;表示删除stash内容。参数&quot;[pop]&quot;表示恢复现场并删除stash内容。</p>
+</blockquote>
+<blockquote>
+<p>git cherry-pick &lt;commit_id&gt;<br>
+复制一个指定的提交到当前分支。</p>
+</blockquote>
+<blockquote>
+<p>git pull<br>
+抓取更新。</p>
+</blockquote>
+<blockquote>
+<p>git rebase<br>
+将本地未push的分叉提交历史整理成直线，使查看历史提交更容易。</p>
+</blockquote>
+<h1 id="4-标签管理">4 标签管理</h1>
+<blockquote>
+<p>git tag [-d] [<name>] [commit_id] [-a &lt;表情名&gt; -m &lt;标签说明&gt; [commit_id]]<br>
+查看标签。参数&quot;[<name>]&quot;则表示为打标签命令，默认打在最新提交的commit上。参数&quot;[<name>] [commit_id]&quot;表示在指定的commit上打标签。参数&quot;[-a &lt;表情名&gt; -m &lt;标签说明&gt; [commit_id]]&quot;表示创建带有说明的标签。参数&quot;[-d] [<name>]&quot;表示删除标签。</p>
+</blockquote>
+<blockquote>
+<p>git show <tagname><br>
+查看标签信息</p>
+</blockquote>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#1-%E5%88%9B%E5%BB%BA%E7%89%88%E6%9C%AC%E5%BA%93">1 创建版本库</a>
+<ul>
+<li><a href="#%E6%8A%8A%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E6%94%BE%E5%88%B0git%E4%BB%93%E5%BA%93%E5%8F%AA%E9%9C%80%E8%A6%81%E4%B8%A4%E6%AD%A5">把一个文件放到Git仓库只需要两步</a></li>
+</ul>
+</li>
+<li><a href="#2-%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86">2 仓库管理</a></li>
+<li><a href="#3-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93">3 远程仓库</a>
+<ul>
+<li><a href="#%E9%85%8D%E7%BD%AEgithub%E4%BB%93%E5%BA%93">配置GitHub仓库</a></li>
+</ul>
+</li>
+<li><a href="#4-%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86">4 分支管理</a></li>
+<li><a href="#4-%E6%A0%87%E7%AD%BE%E7%AE%A1%E7%90%86">4 标签管理</a></li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://inthowe.github.io/post/wu-dui-ji/">
+              <h3 class="post-title">
+                五、对集
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '94ec1fd51176ba3adda3',
+    clientSecret: '961116715b7a89cb10a934782a30798bcef32d89',
+    repo: 'inthowe.github.io',
+    owner: 'IntHowe',
+    admin: ['IntHowe'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://inthowe.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
